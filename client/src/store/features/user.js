@@ -6,8 +6,9 @@ import {menuItems} from '../../common/menu';
 const initialState = {
     userData: {}
 };
-const AUTH_URL = 'http://localhost:3000/auth';
-const ISAUTH_URL = 'http://localhost:3000/user-info';
+const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const AUTH_URL = `${BASE_URL}/auth`;
+const ISAUTH_URL = `${BASE_URL}/projects`;
 export const getUserAsync = createAsyncThunk('user/getUser', async (credentials = {}) => {
     const {login, password, token} = credentials;
     if (token) {
