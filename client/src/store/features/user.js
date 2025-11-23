@@ -8,7 +8,7 @@ const initialState = {
 };
 const BASE_URL = 'https://hm-033-task-manager.onrender.com';
 const AUTH_URL = `${BASE_URL}/auth`;
-const ISAUTH_URL = `${BASE_URL}/projects`;
+const ISAUTH_URL = `${BASE_URL}/user-info`;
 export const getUserAsync = createAsyncThunk('user/getUser', async (credentials = {}) => {
     const {login, password, token} = credentials;
     if (token) {
