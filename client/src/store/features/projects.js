@@ -18,7 +18,8 @@ const initialState = {
   CRUD
 */
 
-const PROJECTS_URL = 'http://localhost:3000/projects';
+const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const PROJECTS_URL = `${BASE_URL}/projects`;
 
 export const getProjectsAsync = createAsyncThunk('projects/getList', async () => {
   const result = await axios.get(PROJECTS_URL);
