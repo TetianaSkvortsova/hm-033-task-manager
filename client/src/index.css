@@ -1,0 +1,86 @@
+:root {
+  --bg-primary: #121218;
+  --bg-secondary: #1F2430;
+  --text-primary: #F0F0F0;
+  --accent-cyan: #00CED1;
+  --accent-green: #00D084;
+  --accent-red: #FF4136;
+  --accent-yellow: #FFC107;
+  --border-color: #3A98B8;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 5px var(--accent-cyan);
+}
+
+button {
+  background-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #00A3A5;
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type="text"], input[type="password"], textarea, select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 5px rgba(0, 206, 209, 0.7);
+}

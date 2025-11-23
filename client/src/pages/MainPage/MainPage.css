@@ -1,0 +1,7 @@
+.MainPage {
+    padding: 50px;
+    font-size: 2rem;
+    color: var(--accent-cyan);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 206, 209, 0.7);
+}

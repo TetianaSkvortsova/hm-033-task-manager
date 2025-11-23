@@ -1,0 +1,10 @@
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav li a {
+  font-size: 1.1rem;
+  padding: 5px 0;
+}

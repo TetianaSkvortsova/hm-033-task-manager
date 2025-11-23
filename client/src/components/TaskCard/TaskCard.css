@@ -1,0 +1,28 @@
+.TaskCard {
+  background-color: var(--bg-secondary);
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.TaskCard:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 5px rgba(0, 206, 209, 0.4);
+}
+
+.TaskCard h3 {
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+  margin-bottom: 5px;
+}
+
+.TaskCard p {
+  font-size: 0.85rem;
+  color: #B0B0B0;
+  margin-top: 5px;
+  flex-grow: 1;
+}

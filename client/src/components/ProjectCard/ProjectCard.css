@@ -1,0 +1,54 @@
+.ProjectCard {
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid var(--accent-cyan);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  position: relative;
+}
+
+.ProjectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 206, 209, 0.3);
+  border-left-color: var(--accent-green);
+}
+
+.ProjectCard h3 {
+  color: var(--accent-cyan);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.ProjectCard p {
+  flex-grow: 1;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #A9A9A9;
+  line-height: 1.4;
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--accent-red);
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.delete::after {
+  content: "×";
+}
+
+.delete:hover {
+  color: #FF6347;
+}
