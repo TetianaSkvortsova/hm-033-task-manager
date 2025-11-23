@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread, and fruit",
+    "priority": "medium",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "title": "Write report",
+    "description": "Finish monthly sales report",
+    "priority": "high",
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "title": "Clean workspace",
+    "description": "Tidy desk and organize cables",
+    "priority": "low",
+    "status": "todo"
+  },
+  {
+    "id": 4,
+    "title": "Call plumber",
+    "description": "Fix kitchen sink leak",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": 5,
+    "title": "Plan weekend trip",
+    "description": "Choose destination and book hotel",
+    "priority": "medium",
+    "status": "todo"
+  },
+  {
+    "id": 6,
+    "title": "Read book",
+    "description": "Read 50 pages of current book",
+    "priority": "low",
+    "status": "in-progress"
+  },
+  {
+    "id": 7,
+    "title": "Update resume",
+    "description": "Add recent projects and skills",
+    "priority": "medium",
+    "status": "todo"
+  },
+  {
+    "id": 8,
+    "title": "Pay bills",
+    "description": "Electricity and internet",
+    "priority": "high",
+    "status": "todo"
+  },
+  {
+    "id": 9,
+    "title": "Exercise",
+    "description": "30-minute run or home workout",
+    "priority": "low",
+    "status": "done"
+  },
+  {
+    "id": 10,
+    "title": "Backup laptop",
+    "description": "Run full system backup to external drive",
+    "priority": "medium",
+    "status": "todo"
+  }
+]
