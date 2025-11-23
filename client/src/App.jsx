@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router'
+import { HashRouter} from 'react-router'
 import './App.css'
 import Content from './components/Content/Content'
 import Header from './components/Header/Header'
@@ -20,10 +20,10 @@ function App() {
     }, [dispatch]);
   return (
     <>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Header />
         <Content />
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
