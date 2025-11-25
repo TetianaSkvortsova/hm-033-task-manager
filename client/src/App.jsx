@@ -1,4 +1,5 @@
-import { HashRouter} from 'react-router'
+// import { HashRouter} from 'react-router'
+import {BrowserRouter} from 'react-router';
 import './App.css'
 import Content from './components/Content/Content'
 import Header from './components/Header/Header'
@@ -18,14 +19,16 @@ function App() {
             token: token,
         }));
     }, [dispatch]);
-  return (
-    <>
-      <HashRouter>
-        <Header />
-        <Content />
-      </HashRouter>
-    </>
-  )
+    return (
+        <>
+            {/*<HashRouter>*/}
+            <BrowserRouter>
+                <Header/>
+                <Content/>
+            </BrowserRouter>
+            {/*</HashRouter>*/}
+        </>
+    )
 }
 
 export default App

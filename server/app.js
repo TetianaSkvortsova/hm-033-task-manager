@@ -111,6 +111,32 @@ app.delete('/projects/:id', async (request, response) => {
     }
 })
 
+app.get('/projects/:id', (request, response) => {
+    const {id} = request.params;
+    const projectData = projectsMock.find(project => project.id === id);
+    return response.status(200).json({
+        message: `Project with ID ${id}.`,
+        projectCount: projectsMock.length,
+        project: projectData,
+    });
+})
+
+app.put('/projects/:id', (request, response) => {
+    const updateData = request.body;
+    const projectId = request.params.id;
+    const indexProject = projectsMock.findIndex(project => project.id === updateData.id);
+    projectsMock[indexProject] = {
+        ...projectsMock[indexProject],
+        ...updateData,
+        id: projectId
+    };
+    return response.status(200).json({
+        message: `Project with ID ${projectId}.`,
+        projectCount: projectsMock.length,
+        project: projectsMock[indexProject],
+    });
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);

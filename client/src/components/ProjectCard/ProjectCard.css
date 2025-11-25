@@ -31,7 +31,7 @@
   line-height: 1.4;
 }
 
-.delete {
+/*.action-menu {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -43,12 +43,13 @@
   z-index: 10;
   padding: 5px;
   transition: color 0.3s;
-}
+}*/
 
+/*
 .delete::after {
   content: "×";
 }
 
 .delete:hover {
   color: #FF6347;
-}
+}*/

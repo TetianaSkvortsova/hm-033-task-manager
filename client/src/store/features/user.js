@@ -2,11 +2,11 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
 import {menuItems} from '../../common/menu';
 
-
 const initialState = {
     userData: {}
 };
-const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+// const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const BASE_URL = 'http://localhost:3000';
 const AUTH_URL = `${BASE_URL}/auth`;
 const ISAUTH_URL = `${BASE_URL}/user-info`;
 export const getUserAsync = createAsyncThunk('user/getUser', async (credentials = {}) => {

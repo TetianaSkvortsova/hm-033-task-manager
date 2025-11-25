@@ -4,21 +4,12 @@ import axios from 'axios';
 
 const initialState = {
   data: [],
+  currentProject: {},
   loaded: false,
 };
 
-/*
-  project: {
-    id: string,
-    title: string,
-    priority: string,
-    descrition: string,
-  }
-
-  CRUD
-*/
-
-const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+// const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const BASE_URL = 'http://localhost:3000';
 const PROJECTS_URL = `${BASE_URL}/projects`;
 
 export const getProjectsAsync = createAsyncThunk('projects/getList', async () => {
@@ -37,25 +28,22 @@ export const deleteProjectAsync = createAsyncThunk('projects/delete', async (pro
   return result.data;
 })
 
+export const getProjectByIdAsync = createAsyncThunk('projects/edit', async (projectId) => {
+  const fullUrl = `${PROJECTS_URL}/${projectId}`;
+  const result = await axios.get(fullUrl);
+  return result.data.project;
+})
+
+export const updateProjectAsync = createAsyncThunk('projects/saveEdit', async (project) => {
+  const fullUrl = `${PROJECTS_URL}/${project.id}`;
+  const result = await axios.put(fullUrl, project);
+  return result.data.project;
+})
+
 const projectsSlice = createSlice({
   name: 'projects',
   initialState,
-  reducers: {
-    // addProject: (state, action) => {
-    //   // generate id
-    //   // if integer needed:
-    //   // const id = Date.now();
-    //   const id = uuidv4(); // each time - new unique id
-
-    //   // add to store
-    //   const newProject = {
-    //     id,
-    //     ...action.payload,
-    //   };
-      
-    //   state.data.push(newProject);
-    // }
-  },
+  reducers: {},
   extraReducers: builder => {
     builder.addCase(getProjectsAsync.fulfilled, (state, action) => {
       state.data = action.payload;
@@ -67,6 +55,22 @@ const projectsSlice = createSlice({
 
     builder.addCase(deleteProjectAsync.fulfilled, (state, action) => {
       state.data = action.payload.projects;
+    });
+
+    builder.addCase(getProjectByIdAsync.fulfilled, (state, action) => {
+      state.currentProject = action.payload;
+    });
+
+    builder.addCase(updateProjectAsync.fulfilled, (state, action) => {
+      const updatedProject = action.payload;
+      const index = state.data.findIndex(p => p.id === updatedProject.id);
+
+      if (index !== -1) {
+        state.data[index] = updatedProject;
+      }
+
+      state.currentProject = null;
+      state.loaded = true;
     });
   }
 });

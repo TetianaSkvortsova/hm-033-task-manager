@@ -2,9 +2,11 @@ import MainPage from "../pages/MainPage/MainPage";
 import NewProjectPage from "../pages/NewProjectPage/NewProjectPage";
 import ProjectsPage from "../pages/ProjectsPage/ProjectsPage";
 import TasksPage from "../pages/TasksPage/TasksPage";
+import EditProjectPage from "../pages/EditProjectPage/EditProjectPage.jsx";
 
 export const urls = {
   NEW_PROJECT_URL: '/projects/new',
+  EDIT_PROJECT_URL: '/edit/:projectId',
   PROJECTS_URL: '/projects',
 };
 
@@ -35,5 +37,10 @@ export const menuItems = [
     path: '/tasks/:projectId',
     hideInMenu: true,
     Component: TasksPage
+  },
+  {
+    path: urls.EDIT_PROJECT_URL,
+    hideInMenu: true,
+    Component: EditProjectPage,
   },
 ];
