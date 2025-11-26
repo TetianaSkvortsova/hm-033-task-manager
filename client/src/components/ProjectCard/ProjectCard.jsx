@@ -11,7 +11,6 @@ export default function ProjectCard({id, title, description, priority, onClick})
     return (
         <div className='ProjectCard' onClick={handleClick}>
             <ActionMenu id={id}/>
-            {/*<div className="delete" onClick={handleDelete}></div>*/}
             <h3>{title}</h3>
             <PriorityLabel priority={priority}/>
             <p>

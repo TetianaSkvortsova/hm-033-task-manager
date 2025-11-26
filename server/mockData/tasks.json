@@ -1,38 +1,844 @@
 [
   {
-    "id": "1c2d3e4f-5a6b-7c8d-9e0f-1a2b3c4d5e6f",
-    "title": "Set up CI pipeline",
-    "description": "Configure CI to run linting, tests, and build for pull requests.",
-    "priority": "HIGH",
-    "status": "todo",
-    "assignee": "DevOps Team",
-    "projectId": "project-1"
-  },
-  {
-    "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
-    "title": "Accessibility audit",
-    "description": "Run an accessibility audit and fix identified issues to meet WCAG AA.",
+    "id": "2918b958-3d19-4b67-827c-3f940843477f",
+    "title": "Develop Landing Page UI - Task 1",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 1)",
     "priority": "LOW",
-    "status": "todo",
-    "assignee": "Accessibility Team",
-    "projectId": "project-1"
+    "status": "TODO",
+    "assignee": "user-009",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
   },
   {
-    "id": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
-    "title": "Integrate payment gateway",
-    "description": "Add support for Stripe payments, handle webhooks, and add e2e tests.",
+    "id": "e0d37e5e-e67c-48c2-a9b0-a5796c80218b",
+    "title": "Update Database Schema - Task 2",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 2)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-003",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "8470a1e3-f661-460d-8380-c1e194553229",
+    "title": "Develop Landing Page UI - Task 3",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 3)",
     "priority": "HIGH",
-    "status": "todo",
-    "assignee": "Finance Integrations",
-    "projectId": "project-3"
+    "status": "IN_PROGRESS",
+    "assignee": "user-005",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
   },
   {
-    "id": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
-    "title": "Project retrospective",
-    "description": "Organize and run a retrospective for the last sprint; capture action items.",
+    "id": "528564c7-1a41-4148-971c-43f14068593a",
+    "title": "Review Pull Request #123 - Task 4",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 4)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "85f8389c-484d-4573-81b0-272e0a299532",
+    "title": "Develop Landing Page UI - Task 5",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 5)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-005",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "f58992f1-62d2-4f32-84fc-2c262744214f",
+    "title": "Refactor Legacy Codebase - Task 6",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 6)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "b1c41b80-16d7-46ef-b9f0-2646d2994961",
+    "title": "Develop Landing Page UI - Task 7",
+    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 7)",
     "priority": "LOW",
-    "status": "done",
-    "assignee": "Team Leads",
-    "projectId": "project-2"
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "31b017b3-d309-48c0-9988-c47c555d401a",
+    "title": "Fix Critical Bug in API - Task 8",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 8)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-005",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "2d1416a9-e74c-4e8c-859a-1c7136c34273",
+    "title": "Develop Landing Page UI - Task 9",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 9)",
+    "priority": "HIGH",
+    "status": "DONE",
+    "assignee": "user-001",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "8e3c631e-450b-4876-b333-d89771a39f99",
+    "title": "Fix Critical Bug in API - Task 10",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 10)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "402e485d-8557-4b10-911e-b83d1c1c737f",
+    "title": "Review Pull Request #123 - Task 11",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 11)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-007",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "35850e05-64c8-472b-8a16-6086f5c88d8b",
+    "title": "Develop Landing Page UI - Task 12",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 12)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "018f9721-e35f-4d33-9118-c2b535d97e3a",
+    "title": "Design New Feature Mockups - Task 13",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 13)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "709f19a0-0036-419b-b5d3-82b52701e97b",
+    "title": "Refactor Legacy Codebase - Task 14",
+    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 14)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-002",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "5179042c-29d2-45e8-b808-0a67104d4128",
+    "title": "Refactor Legacy Codebase - Task 15",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 15)",
+    "priority": "HIGH",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "4225019a-9860-44e2-a720-30239a58b6c0",
+    "title": "Implement User Authentication - Task 16",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 16)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "3185348b-3e11-4475-9c81-807a0c0e7d54",
+    "title": "Design New Feature Mockups - Task 17",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 17)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "b34e568f-9d90-4a81-9b69-807d9f2b8a71",
+    "title": "Fix Critical Bug in API - Task 18",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 18)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-007",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "c62a048a-676d-473d-82d8-500e5e019a0a",
+    "title": "Implement User Authentication - Task 19",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 19)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-001",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "526d0d01-1e9d-4738-89c0-67258b3554e2",
+    "title": "Develop Landing Page UI - Task 20",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 20)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-010",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "184d0087-0b19-4b6e-a212-381440d9b4c0",
+    "title": "Implement User Authentication - Task 21",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 21)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "d049f506-692a-4467-9c98-1f5d616774a0",
+    "title": "Implement User Authentication - Task 22",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 22)",
+    "priority": "HIGH",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "3139268f-f77e-4911-9257-814d2e74e301",
+    "title": "Conduct Performance Review - Task 23",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 23)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "a5762d64-4f40-4b66-8806-d284a1a5b812",
+    "title": "Write Unit Tests for Service X - Task 24",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 24)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-004",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "1a166a98-8e6d-472e-8d8d-563560d2109e",
+    "title": "Fix Critical Bug in API - Task 25",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 25)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-005",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "67041763-718e-4a81-b51c-7f519520448f",
+    "title": "Develop Landing Page UI - Task 26",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 26)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-001",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "c71e9a2b-b6b8-472e-8120-e22e5a5796f3",
+    "title": "Write Unit Tests for Service X - Task 27",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 27)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-009",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "62e148e1-5e82-4213-91c6-2184e55581a6",
+    "title": "Develop Landing Page UI - Task 28",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 28)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-007",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "62b78d2b-65c3-4d7c-87b6-193f444b749d",
+    "title": "Fix Critical Bug in API - Task 29",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 29)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "403d526e-4e4c-4e89-a359-9343f9a7122a",
+    "title": "Update Database Schema - Task 30",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 30)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-009",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "b34e568f-9d50-4a81-9b69-807d9f2b8a71",
+    "title": "Develop Landing Page UI - Task 31",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 31)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "c62a048a-666d-473d-82d8-500e5e019a0a",
+    "title": "Fix Critical Bug in API - Task 32",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 32)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "522d0d01-1e9d-4738-89c0-67258b3554e2",
+    "title": "Review Pull Request #123 - Task 33",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 33)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-007",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "184d0087-0b19-4b6e-a222-381440d9b4c0",
+    "title": "Develop Landing Page UI - Task 34",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 34)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "d049f506-692a-4467-9c98-1f5d606774a0",
+    "title": "Design New Feature Mockups - Task 35",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 35)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "3139268f-f77e-4911-9257-814d2e74e305",
+    "title": "Refactor Legacy Codebase - Task 36",
+    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 36)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-002",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "a5762d64-4f40-4b66-8806-d284a1a5b862",
+    "title": "Refactor Legacy Codebase - Task 37",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 37)",
+    "priority": "HIGH",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "1a166a98-8e6d-472e-8d8d-567560d2109e",
+    "title": "Implement User Authentication - Task 38",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 38)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "67041763-718e-4a81-b51c-7f519521448f",
+    "title": "Design New Feature Mockups - Task 39",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 39)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "c71e9a2b-b6b8-472e-8120-e22e5a5196f3",
+    "title": "Fix Critical Bug in API - Task 40",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 40)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-007",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "62e148e1-5e82-4113-91c6-2184e55581a6",
+    "title": "Implement User Authentication - Task 41",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 41)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-001",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "62b78d2b-65c3-4d7c-87b6-193f447b749d",
+    "title": "Develop Landing Page UI - Task 42",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 42)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-010",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "403d526e-4e4c-4e89-a359-9943f9a7122a",
+    "title": "Implement User Authentication - Task 43",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 43)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "b34e568f-9d90-4a81-9b69-808d9f2b8a71",
+    "title": "Implement User Authentication - Task 44",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 44)",
+    "priority": "HIGH",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "c62a048a-666d-483d-82d8-500e5e019a0a",
+    "title": "Conduct Performance Review - Task 45",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 45)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "523d0d01-1e9d-4738-89c0-67258b3554e2",
+    "title": "Write Unit Tests for Service X - Task 46",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 46)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-004",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "184d0087-0b19-5b6e-a222-381440d9b4c0",
+    "title": "Fix Critical Bug in API - Task 47",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 47)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-005",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "d049f506-692a-4467-9c98-1f5d606574a0",
+    "title": "Develop Landing Page UI - Task 48",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 48)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-001",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "3139268f-f77e-4911-9257-814d2e74e303",
+    "title": "Write Unit Tests for Service X - Task 49",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 49)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-009",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "a5762d64-4f40-4b66-8806-d284a1a5b822",
+    "title": "Develop Landing Page UI - Task 50",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 50)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-007",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "1a166a98-8e6d-472e-8d8d-564560d2109e",
+    "title": "Fix Critical Bug in API - Task 51",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 51)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "67061763-718e-4a81-b51c-7f519520448f",
+    "title": "Update Database Schema - Task 52",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 52)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-009",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "c71e9a2b-b6b8-472e-8120-e22e5a5186f3",
+    "title": "Develop Landing Page UI - Task 53",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 53)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "62e148e1-5e82-4113-97c6-2184e55581a6",
+    "title": "Fix Critical Bug in API - Task 54",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 54)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "62b78d2b-65c3-4d7c-87b6-193f443b749d",
+    "title": "Review Pull Request #123 - Task 55",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 55)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-007",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "403d526e-4e4c-4e89-a379-9943f9a7122a",
+    "title": "Develop Landing Page UI - Task 56",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 56)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "0d9c026b-67a5-4f46-953e-c6a287900b70",
+    "title": "Design New Feature Mockups - Task 57",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 57)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "97e68224-b519-4b68-8092-23c34e7c7a7b",
+    "title": "Refactor Legacy Codebase - Task 58",
+    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 58)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-002",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "9f7a7d4a-a4d1-4f1b-85d1-48740f9c2d73",
+    "title": "Refactor Legacy Codebase - Task 59",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 59)",
+    "priority": "HIGH",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "0c9d7d4a-a4d1-4f1b-85d1-48740f9c2d73",
+    "title": "Implement User Authentication - Task 60",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 60)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "1d8b96d9-f472-466d-b8d9-23c34e7c7a7b",
+    "title": "Design New Feature Mockups - Task 61",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 61)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "f5108f91-5a3d-4250-93c6-e41c40212f45",
+    "title": "Fix Critical Bug in API - Task 62",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 62)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-007",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "c979d3b4-e35f-4d92-95f7-f83690d56c07",
+    "title": "Implement User Authentication - Task 63",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 63)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-001",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "e44d70ef-1b91-4999-906d-4959146522c5",
+    "title": "Develop Landing Page UI - Task 64",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 64)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-010",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "4d193d5f-14a0-4252-959c-6b3a049103c8",
+    "title": "Implement User Authentication - Task 65",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 65)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "936081e6-4277-4409-9034-716d10c85c21",
+    "title": "Implement User Authentication - Task 66",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 66)",
+    "priority": "HIGH",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "33246f90-1e5b-432d-947f-8d76d47b565a",
+    "title": "Conduct Performance Review - Task 67",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 67)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "b78b0561-125d-4f6c-8386-350711909772",
+    "title": "Write Unit Tests for Service X - Task 68",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 68)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-004",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "67a30386-8947-494b-9e4a-959772183c74",
+    "title": "Fix Critical Bug in API - Task 69",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 69)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-005",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "91866373-3164-4e20-80a2-25e59b2d8618",
+    "title": "Develop Landing Page UI - Task 70",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 70)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-001",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "a933f782-b7f7-4638-9588-e215f3358043",
+    "title": "Write Unit Tests for Service X - Task 71",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 71)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-009",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "9b1c7c9c-2980-45fa-9481-2c0920401815",
+    "title": "Develop Landing Page UI - Task 72",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 72)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-007",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "b90e9d6d-177b-4020-86d1-419b4b0e5728",
+    "title": "Fix Critical Bug in API - Task 73",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 73)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "771e1a53-33e1-454d-9669-e58f0007823e",
+    "title": "Update Database Schema - Task 74",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 74)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-009",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "9e81b61c-813e-4635-b2b5-e6594c34a177",
+    "title": "Develop Landing Page UI - Task 75",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 75)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "a1811559-7157-4180-8736-b6058e376a9a",
+    "title": "Fix Critical Bug in API - Task 76",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 76)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "276b911a-1d12-4f36-a36c-945281432f4c",
+    "title": "Review Pull Request #123 - Task 77",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 77)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-007",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "92f7530c-5147-495c-9c98-144f885e35e7",
+    "title": "Develop Landing Page UI - Task 78",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 78)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "060233b6-2090-449e-8736-22485e985161",
+    "title": "Design New Feature Mockups - Task 79",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 79)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8"
+  },
+  {
+    "id": "67f57348-125d-4f6c-8386-350711909773",
+    "title": "Refactor Legacy Codebase - Task 80",
+    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 80)",
+    "priority": "MEDIUM",
+    "status": "IN_PROGRESS",
+    "assignee": "user-002",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "97e68224-b519-4b68-8092-23c34e7c7a7c",
+    "title": "Refactor Legacy Codebase - Task 81",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 81)",
+    "priority": "HIGH",
+    "status": "IN_PROGRESS",
+    "assignee": "user-001",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "9f7a7d4a-a4d1-4f1b-85d1-48740f9c2d74",
+    "title": "Implement User Authentication - Task 82",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 82)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
+  },
+  {
+    "id": "0c9d7d4a-a4d1-4f1b-85d1-48740f9c2d74",
+    "title": "Design New Feature Mockups - Task 83",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 83)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-008",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "1d8b96d9-f472-466d-b8d9-23c34e7c7a7c",
+    "title": "Fix Critical Bug in API - Task 84",
+    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 84)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-007",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "f5108f91-5a3d-4250-93c6-e41c40212f46",
+    "title": "Implement User Authentication - Task 85",
+    "description": "Address the reported issue where the server crashes on high load. (Task ID: 85)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-001",
+    "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
+  },
+  {
+    "id": "c979d3b4-e35f-4d92-95f7-f83690d56c08",
+    "title": "Develop Landing Page UI - Task 86",
+    "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 86)",
+    "priority": "LOW",
+    "status": "DONE",
+    "assignee": "user-010",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "e44d70ef-1b91-4999-906d-4959146522c6",
+    "title": "Implement User Authentication - Task 87",
+    "description": "Modernize outdated parts of the system to improve maintainability. (Task ID: 87)",
+    "priority": "MEDIUM",
+    "status": "TODO",
+    "assignee": "user-004",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "4d193d5f-14a0-4252-959c-6b3a049103c9",
+    "title": "Implement User Authentication - Task 88",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 88)",
+    "priority": "HIGH",
+    "status": "DONE",
+    "assignee": "user-002",
+    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
+  },
+  {
+    "id": "936081e6-4277-4409-9034-716d10c85c23",
+    "title": "Conduct Performance Review - Task 89",
+    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 89)",
+    "priority": "LOW",
+    "status": "TODO",
+    "assignee": "user-006",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "33246f90-1e5b-432d-947f-8d76d47b565b",
+    "title": "Write Unit Tests for Service X - Task 90",
+    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 90)",
+    "priority": "LOW",
+    "status": "IN_PROGRESS",
+    "assignee": "user-004",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "b78b0561-125d-4f6c-8386-350711909773",
+    "title": "Fix Critical Bug in API - Task 91",
+    "description": "Add new field for 'due_date' in the tasks table. (Task ID: 91)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-005",
+    "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
+  },
+  {
+    "id": "67a30386-8947-494b-9e4a-959772183c75",
+    "title": "Develop Landing Page UI - Task 92",
+    "description": "Formal meeting with team members to discuss goals and progress. (Task ID: 92)",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-001",
+    "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
+  },
+  {
+    "id": "91866373-3164-4e20-80a2-25e59b2d8619",
+    "title": "Write Unit Tests for Service X - Task 93",
+    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 93)",
+    "priority": "MEDIUM",
+    "status": "DONE",
+    "assignee": "user-009",
+    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
+  },
+  {
+    "id": "a933f782-b7f7-4638-9588-e215f3358044",
+    "title": "Develop Landing Page UI - Task 94",
+    "description": "Modernize outdated parts of the system to improve maintainability. "
   }
 ]

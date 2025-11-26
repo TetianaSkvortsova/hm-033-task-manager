@@ -1,14 +1,92 @@
 [
   {
-    "id": "a8772c1e-2738-48ab-87f8-a77739c9ee59",
-    "title": "New Project",
-    "description": "fdgndjkfgdk dfjhgdfgjkd",
+    "id": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7",
+    "title": "E-commerce Platform Redesign",
+    "description": "Complete overhaul of the existing online store interface to improve user experience (UX) and conversion rates. Focus on mobile responsiveness and simplified checkout process.",
     "priority": "HIGH"
   },
   {
-    "id": "7ee41677-eba0-4e6d-b748-25be3c0e6e88",
-    "title": "Project 33",
-    "description": "ccbcvbbc",
+    "id": "2b3c4d5e-6f70-89a0-b1c2-d3e4f5a6b7c8",
+    "title": "Internal CRM System Upgrade",
+    "description": "Migrate the legacy Customer Relationship Management (CRM) system to a cloud-based solution. Includes data cleanup and integration with marketing automation tools.",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9",
+    "title": "Q3 Financial Reporting Automation",
+    "description": "Develop scripts and dashboards to automatically generate quarterly financial reports, reducing manual data entry time by 50%.",
+    "priority": "HIGH"
+  },
+  {
+    "id": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0",
+    "title": "Mobile App Beta Testing Program",
+    "description": "Recruit and manage 100 external beta testers for the new Android and iOS application features. Collect and analyze feedback.",
+    "priority": "LOW"
+  },
+  {
+    "id": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1",
+    "title": "Corporate Website Security Audit",
+    "description": "Comprehensive security audit of the main company website. Implement necessary patches to address cross-site scripting (XSS) and SQL injection vulnerabilities.",
+    "priority": "HIGH"
+  },
+  {
+    "id": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2",
+    "title": "New Employee Onboarding Documentation",
+    "description": "Create and organize a complete knowledge base for new employees, covering IT setup, HR policies, and team procedures.",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3",
+    "title": "API Documentation Enhancement",
+    "description": "Improve clarity and completeness of the public-facing API documentation. Add code examples for Python and JavaScript consumers.",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4",
+    "title": "Data Backup and Recovery Strategy",
+    "description": "Review and update the disaster recovery plan. Test automated daily backups for all critical databases and file storage.",
+    "priority": "HIGH"
+  },
+  {
+    "id": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5",
+    "title": "Office Layout Optimization",
+    "description": "Analyze current office space usage and propose a new layout to improve team collaboration and reduce noise levels.",
+    "priority": "LOW"
+  },
+  {
+    "id": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6",
+    "title": "Client Feedback Collection System",
+    "description": "Implement a new automated system for collecting feedback immediately after project completion. Integrate with the support ticket system.",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "5c953bb6-8a09-4d6d-87e8-07e78ee6e48a",
+    "title": "Test",
+    "description": "Test",
+    "priority": "MEDIUM"
+  },
+  {
+    "id": "94e3c96b-003e-4109-990c-737cfc887127",
+    "title": "Test 2 ",
+    "description": "test 2",
+    "priority": "HIGH"
+  },
+  {
+    "id": "7a09d611-f9f6-4427-b562-c156fab9e647",
+    "title": "Test 4",
+    "description": "test3",
+    "priority": "HIGH"
+  },
+  {
+    "id": "043c5c14-7cae-4271-8b39-21af6eb45240",
+    "title": "test 5",
+    "description": "test 5",
+    "priority": "LOW"
+  },
+  {
+    "id": "054852ff-43c2-44f0-b9af-5c4e2d676493",
+    "title": "еуіе 7",
+    "description": "ловрлвоі",
     "priority": "HIGH"
   }
 ]

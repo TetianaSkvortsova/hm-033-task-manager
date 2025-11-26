@@ -6,7 +6,6 @@ import {
     ListItemIcon,
     ListItemText,
     Box,
-    Typography,
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert'; // Три вертикальні крапки
 import EditIcon from '@mui/icons-material/Edit';
@@ -15,11 +14,13 @@ import {useDispatch} from "react-redux";
 import {deleteProjectAsync, getProjectByIdAsync} from "../../store/features/projects.js";
 import {useNavigate} from "react-router";
 import {urls} from "../../common/menu.js";
+import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog.jsx";
 
-function ActionMenu({id}) {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+function ActionMenu({onEdit, onDelete}) {
+    // const dispatch = useDispatch();
+    // const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null);
+    // const [openConfirm, setOpenConfirm] = useState(false);
     const open = Boolean(anchorEl);
 
     // Обробник відкриття меню
@@ -37,17 +38,30 @@ function ActionMenu({id}) {
     // Обробники дій
     const handleEdit = (event) => {
         event.stopPropagation();
-        const editUrl = urls.EDIT_PROJECT_URL.replace(':projectId', id);
+       /* const editUrl = urls.EDIT_PROJECT_URL.replace(':projectId', id);
         dispatch(getProjectByIdAsync(id));
         navigate(editUrl);
-        console.log(id);
+        console.log(id);*/
         handleClose(event);
+        onEdit && onEdit();
     };
+
+    /*const handleOpenConfirm = (event) => {
+        event.stopPropagation();
+        handleClose(event); // Закриваємо меню
+        setOpenConfirm(true); // Відкриваємо діалог
+    };*/
+
+   /* const handleCloseConfirm = (event) => {
+        event.stopPropagation();
+        setOpenConfirm(false);
+    };*/
 
     const handleDelete = (event) => {
         event.stopPropagation();
-        dispatch(deleteProjectAsync(id));
+        // dispatch(deleteProjectAsync(id));
         handleClose(event);
+        onDelete && onDelete();
     };
 
     return (
@@ -81,7 +95,7 @@ function ActionMenu({id}) {
             </IconButton>
             <Menu
                 id="action-menu"
-                anchorEl={anchorEl} // До чого прив'язане меню (наша кнопка)
+                anchorEl={anchorEl}
                 open={open} // Чи відкрите меню (залежить від стану `anchorEl`)
                 onClose={handleClose} // Викликається при кліку поза меню або натисканні Esc
 
@@ -140,6 +154,14 @@ function ActionMenu({id}) {
                     <ListItemText>Delete</ListItemText>
                 </MenuItem>
             </Menu>
+            {/*<ConfirmationDialog
+                open={openConfirm}
+                onClose={handleCloseConfirm}
+                onConfirm={handleConfirmDelete}
+                title={"Confirm Project Deletion"}
+                description={"Are you sure you want to permanently delete this project? This action cannot be undone and will also delete all associated tasks."}
+                confirmText="Delete Project"
+            />*/}
         </Box>
     );
 }

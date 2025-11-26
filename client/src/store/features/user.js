@@ -38,7 +38,9 @@ const userSlice = createSlice({
                 state.userData = action.payload;
                 state.error = null;
                 menuItems.find(item => {
-                    if (item.hideInMenu === true) item.hideInMenu = false;
+                    if (item.title && item.hideInMenu === true) {
+                        item.hideInMenu = false;
+                    }
                 });
                 localStorage.setItem('authToken', state.userData.user.hash);
             })

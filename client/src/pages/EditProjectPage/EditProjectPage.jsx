@@ -5,22 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProjectByIdAsync } from '../../store/features/projects';
 import ProjectForm from "../../components/ProjectForm/ProjectForm.jsx"; // Вам знадобиться нова дія
 
-// Імпортуємо універсальну форму
-// import ProjectForm from '../components/ProjectForm';
-
 // Ця сторінка відповідає за редагування існуючого проекту
 export default function EditProjectPage() {
     const { projectId } = useParams(); // Припускаємо, що маршрут виглядає як /edit/:projectId
-    console.log('projectId: ', projectId);
     const dispatch = useDispatch();
 
     // Припускаємо, що у вашому Redux-стані ви зберігаєте поточний проект, який редагується
-    const projectToEdit = useSelector(state => state.projects.data.find(project => project.id === projectId)
-
-
-        // state.projects.data.find(p => p.id === projectId)
-    );
-    console.log('projectToEdit: ', projectToEdit);
+    const projectToEdit = useSelector(state => state.projects.data.find(project => project.id === projectId));
+    console.log(projectToEdit);
 
     // Ефект для завантаження даних, якщо їх немає
     useEffect(() => {

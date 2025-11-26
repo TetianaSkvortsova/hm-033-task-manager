@@ -130,12 +130,71 @@ app.put('/projects/:id', (request, response) => {
         ...updateData,
         id: projectId
     };
+    saveFileAsync('./mockData/projects.json', projectsMock);
     return response.status(200).json({
         message: `Project with ID ${projectId}.`,
         projectCount: projectsMock.length,
         project: projectsMock[indexProject],
     });
 })
+
+app.post('/tasks', (request, response) => {
+    const task = request.body;
+    const newTask = {
+        id: uuidv4(),
+        ...task,
+    };
+    tasksData.push(newTask);
+
+    saveFileAsync('./mockData/tasks.json', tasksData);
+
+    return response.status(201).json({
+        message: 'Task created successfully.',
+        task: newTask,
+    });
+});
+
+app.delete('/tasks/:id', (request, response) => {
+    const { id } = request.params;
+    const indexTask = tasksData.findIndex(task => task.id === id);
+
+    if (indexTask !== -1) {
+        tasksData.splice(indexTask, 1);
+        saveFileAsync('./mockData/tasks.json', tasksData);
+
+        return response.status(200).json({
+            message: `Task with ID ${id} deleted successfully.`,
+            tasks: tasksData, // Return the updated list
+        });
+    } else {
+        return response.status(404).json({
+            message: `Task with ID ${id} has not been found.`,
+        });
+    }
+});
+
+app.put('/tasks/:id', (request, response) => {
+    const updateData = request.body;
+    const taskId = request.params.id;
+    const indexTask = tasksData.findIndex(task => task.id === taskId);
+
+    if (indexTask !== -1) {
+        tasksData[indexTask] = {
+            ...tasksData[indexTask],
+            ...updateData,
+            id: taskId
+        };
+        saveFileAsync('./mockData/tasks.json', tasksData);
+        return response.status(200).json({
+            message: `Task with ID ${taskId} updated successfully.`,
+            task: tasksData[indexTask],
+        });
+    } else {
+        return response.status(404).json({
+            message: `Task with ID ${taskId} has not been found.`
+        });
+    }
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

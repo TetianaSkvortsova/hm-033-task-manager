@@ -1,4 +1,5 @@
 .TaskCard {
+  position: relative;
   background-color: var(--bg-secondary);
   padding: 15px;
   border-radius: 5px;
@@ -17,12 +18,13 @@
 .TaskCard h3 {
   font-size: 1.1rem;
   color: var(--accent-cyan);
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  width: 215px;
 }
 
 .TaskCard p {
   font-size: 0.85rem;
   color: #B0B0B0;
-  margin-top: 5px;
+  margin-top: 15px;
   flex-grow: 1;
 }

@@ -43,7 +43,11 @@ export const updateProjectAsync = createAsyncThunk('projects/saveEdit', async (p
 const projectsSlice = createSlice({
   name: 'projects',
   initialState,
-  reducers: {},
+  reducers: {
+    resetLoadedStatus: (state) => {
+      state.loaded = false;
+    },
+  },
   extraReducers: builder => {
     builder.addCase(getProjectsAsync.fulfilled, (state, action) => {
       state.data = action.payload;
@@ -75,4 +79,5 @@ const projectsSlice = createSlice({
   }
 });
 
+export const { resetLoadedStatus } = projectsSlice.actions;
 export default projectsSlice.reducer;

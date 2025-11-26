@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {getUserAsync} from "./store/features/user.js";
+import {getProjectsAsync} from "./store/features/projects.js";
 
 function App() {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function App() {
             password: '',
             token: token,
         }));
+        dispatch(getProjectsAsync());
     }, [dispatch]);
     return (
         <>

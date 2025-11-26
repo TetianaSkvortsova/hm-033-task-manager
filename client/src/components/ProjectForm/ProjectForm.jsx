@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PRIORITIES } from '../../common/priorities';
 import { useDispatch, useSelector } from 'react-redux';
-import {saveProjectAsync, updateProjectAsync} from '../../store/features/projects';
+import {resetLoadedStatus, saveProjectAsync, updateProjectAsync} from '../../store/features/projects';
 import { useNavigate } from 'react-router';
 import { urls } from '../../common/menu';
 
@@ -49,8 +49,9 @@ export default function ProjectForm({ initialData = {} }) {
     useEffect(() => {
         if (isProjectSaved) {
             navigate(urls.PROJECTS_URL);
+            dispatch(resetLoadedStatus());
         }
-    }, [navigate, isProjectSaved]);
+    }, [navigate, isProjectSaved, dispatch]);
 
     return (
         <div>
