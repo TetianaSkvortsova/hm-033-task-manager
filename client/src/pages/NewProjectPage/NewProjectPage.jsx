@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewProjectPage.css';
+// import ProjectForm from "../../components/ProjectForm/ProjectForm.jsx";
 import ProjectForm from "../../components/ProjectForm/ProjectForm.jsx";
 
 // Ця сторінка відповідає лише за створення нового проекту

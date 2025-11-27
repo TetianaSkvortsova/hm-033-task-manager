@@ -48,7 +48,7 @@ function TaskForm({initialData = {}}) {
             priority: initialData.priority || Object.keys(PRIORITIES)[0],
             status: initialData.status || 'todo',
             assignee: initialData.assignee || ASSIGNEES.map(assignee => assignee.id),
-            projectId: initialData.projectId || 'Unassigned',
+            projectId: initialData.projectId || '',
         },
         validationSchema: TaskSchema,
         onSubmit: async (values, {setSubmitting}) => {
@@ -70,7 +70,7 @@ function TaskForm({initialData = {}}) {
     };
 
     return (
-        <div className='TaskForm'>
+        <div className='taskForm'>
             <h1>{formTitle}</h1>
             <form onSubmit={formik.handleSubmit}>
 
@@ -178,6 +178,7 @@ function TaskForm({initialData = {}}) {
                     >
                         {buttonText}
                     </button>
+                    <button type="button" onClick={()=> navigation(urls.TASK_URL)}>Cancel</button>
                 </div>
             </form>
         </div>

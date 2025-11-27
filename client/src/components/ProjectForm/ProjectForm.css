@@ -1,5 +1,5 @@
 /* Basic styling to show validation errors clearly */
-.taskForm {
+.projectForm {
     width: 500px;
     border: 2px solid var(--accent-cyan);
     padding: 20px;

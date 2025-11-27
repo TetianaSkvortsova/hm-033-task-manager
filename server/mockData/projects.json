@@ -1,8 +1,8 @@
 [
   {
     "id": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7",
-    "title": "E-commerce Platform Redesign",
-    "description": "Complete overhaul of the existing online store interface to improve user experience (UX) and conversion rates. Focus on mobile responsiveness and simplified checkout process.",
+    "title": "E-commerce Platform Redesign ",
+    "description": "Complete overhaul of the existing online store interface to improve user experience (UX) and conversion rates. Focus on mobile responsiveness and simplified checkout process. 1",
     "priority": "HIGH"
   },
   {
@@ -52,29 +52,5 @@
     "title": "Client Feedback Collection System",
     "description": "Implement a new automated system for collecting feedback immediately after project completion. Integrate with the support ticket system.",
     "priority": "MEDIUM"
-  },
-  {
-    "id": "5c953bb6-8a09-4d6d-87e8-07e78ee6e48a",
-    "title": "Test",
-    "description": "Test",
-    "priority": "MEDIUM"
-  },
-  {
-    "id": "94e3c96b-003e-4109-990c-737cfc887127",
-    "title": "Test 2 ",
-    "description": "test 2",
-    "priority": "HIGH"
-  },
-  {
-    "id": "043c5c14-7cae-4271-8b39-21af6eb45240",
-    "title": "test 5",
-    "description": "test 5",
-    "priority": "LOW"
-  },
-  {
-    "id": "054852ff-43c2-44f0-b9af-5c4e2d676493",
-    "title": "еуіе 7",
-    "description": "ловрлвоі",
-    "priority": "HIGH"
   }
 ]

@@ -18,15 +18,6 @@
     "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
   },
   {
-    "id": "85f8389c-484d-4573-81b0-272e0a299532",
-    "title": "Develop Landing Page UI - Task 5",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 5)",
-    "priority": "MEDIUM",
-    "status": "IN_PROGRESS",
-    "assignee": "user-005",
-    "projectId": "7089a0b1-c2d3-e4f5-a6b7-c8d9e0f1g2h3"
-  },
-  {
     "id": "f58992f1-62d2-4f32-84fc-2c262744214f",
     "title": "Refactor Legacy Codebase - Task 6",
     "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 6)",

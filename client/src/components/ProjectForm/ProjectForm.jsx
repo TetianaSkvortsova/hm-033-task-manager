@@ -1,94 +1,134 @@
-import React, { useState, useEffect } from 'react';
-import { PRIORITIES } from '../../common/priorities';
-import { useDispatch, useSelector } from 'react-redux';
-import {resetLoadedStatus, saveProjectAsync, updateProjectAsync} from '../../store/features/projects';
-import { useNavigate } from 'react-router';
-import { urls } from '../../common/menu';
+import React from 'react';
+import * as Yup from "yup";
+import {PRIORITIES} from "../../common/priorities.js";
+import {useFormik} from "formik";
+import {urls} from "../../common/menu.js";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router";
+import {saveProjectAsync, updateProjectAsync} from "../../store/features/projects.js";
+import './ProjectForm.css';
 
-// Універсальний компонент форми, який може працювати в двох режимах: СТВОРЕННЯ або РЕДАГУВАННЯ
-// 'initialData' міститиме дані проєкту, якщо ми редагуємо
-export default function ProjectForm({ initialData = {} }) {
-    const navigate = useNavigate();
+const ProjectSchema = Yup.object().shape({
+    title: Yup.string()
+        .min(2, 'Title is too short (min 2 chars)')
+        .max(100, 'Title is too long (max 100 chars)')
+        .required('Title is required'),
+    description: Yup.string()
+        .min(10, 'Description is too short (min 10 chars)')
+        .required('Description is required'),
+    priority: Yup.string()
+        .oneOf(Object.keys(PRIORITIES), 'Invalid Priority selected')
+        .required('Priority is required'),
+});
+
+function ProjectForm({initialData = {}}) {
     const dispatch = useDispatch();
-
-    // 1. Використовуємо локальний стан (useState) замість useRef
-    const [formData, setFormData] = useState({
-        title: initialData.title || '',
-        description: initialData.description || '',
-        priority: initialData.priority || Object.keys(PRIORITIES)[0], // Пріоритет за замовчуванням
-    });
-
-    // Визначаємо, чи це режим редагування (якщо є ID або інші дані)
+    const navigation = useNavigate();
     const isEditing = Boolean(initialData.id);
-    const formTitle = isEditing ? 'Edit project' : 'Add project';
-    const buttonText = isEditing ? 'Save changes' : 'Create project';
+    const formTitle = isEditing ? 'Edit Project' : 'Add New Project';
+    const buttonText = isEditing ? 'Save Changes' : 'Create Project';
 
-    const { loaded: isProjectSaved } = useSelector(state => state.projects);
-
-    // Оновлення стану форми при зміні полів
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value,
-        }));
+    const onSave = async (values) => {
+        const action = isEditing ? updateProjectAsync : saveProjectAsync;
+        await dispatch(action(values));
+        navigation(urls.PROJECTS_URL);
     };
 
-    // Обробка збереження/оновлення
-    const handleSave = () => {
-        if (isEditing) {
-            dispatch(updateProjectAsync({...formData, id: initialData.id }));
-            navigate(urls.PROJECTS_URL);
-        } else {
-            dispatch(saveProjectAsync(formData));
-            console.log(isEditing);
-        }
-    }
+    const formik = useFormik({
+        initialValues: {
+            title: initialData.title || '',
+            description: initialData.description || '',
+            priority: initialData.priority || Object.keys(PRIORITIES)[0],
+        },
+        validationSchema: ProjectSchema,
+        onSubmit: async (values, {setSubmitting}) => {
+            const finalValues = isEditing ? {...values, id: initialData.id} : values;
 
-    // Перенаправлення після успішного збереження
-    useEffect(() => {
-        if (isProjectSaved) {
-            navigate(urls.PROJECTS_URL);
-            dispatch(resetLoadedStatus());
-        }
-    }, [navigate, isProjectSaved, dispatch]);
+            try {
+                await onSave(finalValues);
+            } catch (error) {
+                console.error("Project save failed:", error);
+            } finally {
+                setSubmitting(false);
+            }
+        },
+        enableReinitialize: true,
+    });
+
+    const getError = (field) => {
+        return formik.touched[field] && formik.errors[field] ? formik.errors[field] : null;
+    };
 
     return (
-        <div>
+        <div className="projectForm">
             <h1>{formTitle}</h1>
-            <form>
-                <div>
+            <form onSubmit={formik.handleSubmit}>
+
+                <div className='form-group'>
+                    <label htmlFor="title">Task Title</label>
                     <input
+                        id="title"
                         type="text"
                         name="title"
                         placeholder="Enter title"
-                        value={formData.title} // Контрольований елемент
-                        onChange={handleChange}
+                        value={formik.values.title}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        className={getError('title') ? 'input-error' : ''}
                     />
+                    {getError('title') && (
+                        <div className="error-message">{getError('title')}</div>
+                    )}
                 </div>
-                <div>
-          <textarea
-              name="description"
-              placeholder="Enter description"
-              value={formData.description} // Контрольований елемент
-              onChange={handleChange}
-          ></textarea>
+
+                <div className='form-group'>
+                    <label htmlFor="description">Description</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Enter detailed description"
+                        rows="4"
+                        value={formik.values.description}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        className={getError('description') ? 'input-error' : ''}
+                    ></textarea>
+                    {getError('description') && (
+                        <div className="error-message">{getError('description')}</div>
+                    )}
                 </div>
-                <div>
+
+                <div className='form-group'>
+                    <label htmlFor="priority">Priority</label>
                     <select
+                        id="priority"
                         name="priority"
-                        value={formData.priority} // Контрольований елемент
-                        onChange={handleChange}
+                        value={formik.values.priority}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        className={getError('priority') ? 'select-error' : ''}
                     >
                         {Object.entries(PRIORITIES).map(([key, value]) => (
                             <option key={key} value={key}>{value}</option>
                         ))}
                     </select>
+                    {getError('priority') && (
+                        <div className="error-message">{getError('priority')}</div>
+                    )}
                 </div>
-                <div>
-                    <button type="button" onClick={handleSave}>{buttonText}</button>
+
+                <div className='form-actions'>
+                    <button
+                        type="submit"
+                        disabled={formik.isSubmitting || !formik.isValid}
+                    >
+                        {buttonText}
+                    </button>
+                    <button type="button" onClick={()=> navigation(urls.PROJECTS_URL)}>Cancel</button>
                 </div>
             </form>
         </div>
-    )
+    );
 }
+
+export default ProjectForm;

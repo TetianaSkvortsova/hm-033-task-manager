@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router'; // Для отримання ID з URL
 import { useSelector, useDispatch } from 'react-redux';
-// import { getProjectByIdAsync } from '../../store/features/projects';
 import { getProjectByIdAsync } from '../../store/features/projects';
 import ProjectForm from "../../components/ProjectForm/ProjectForm.jsx"; // Вам знадобиться нова дія
 
@@ -12,7 +11,7 @@ export default function EditProjectPage() {
 
     // Припускаємо, що у вашому Redux-стані ви зберігаєте поточний проект, який редагується
     const projectToEdit = useSelector(state => state.projects.data.find(project => project.id === projectId));
-    console.log(projectToEdit);
+    console.log('projectToEdit: ', projectToEdit);
 
     // Ефект для завантаження даних, якщо їх немає
     useEffect(() => {
