@@ -7,55 +7,55 @@ import NewTaskPage from "../pages/NewTaskPage/NewTaskPage.jsx";
 import EditTaskPage from "../pages/EditTaskPage/EditTaskPage.jsx";
 
 export const urls = {
-  NEW_PROJECT_URL: '/projects/new',
-  EDIT_PROJECT_URL: '/edit/:projectId',
-  PROJECTS_URL: '/projects',
-  TASK_URL: '/tasks',
-  NEW_TASK_URL: '/tasks/new',
-  EDIT_TASK_URL: 'tasks/edit/:taskId',
+    NEW_PROJECT_URL: '/projects/new',
+    EDIT_PROJECT_URL: 'projects/edit/:projectId',
+    PROJECTS_URL: '/projects',
+    TASK_URL: '/tasks',
+    NEW_TASK_URL: '/tasks/new',
+    EDIT_TASK_URL: 'tasks/edit/:taskId',
 };
 
 export const menuItems = [
-  {
-    path: '/',
-    title: 'Main',
-    Component: MainPage,
-  },
-  {
-    path: urls.PROJECTS_URL,
-    hideInMenu: true,
-    title: 'Projects',
-    Component: ProjectsPage,
-  },
-  {
-    path: urls.NEW_PROJECT_URL,
-    hideInMenu: true,
-    Component: NewProjectPage,
-  },
-  {
-    path: urls.NEW_TASK_URL,
-    hideInMenu: true,
-    Component: NewTaskPage,
-  },
-  {
-    path: urls.EDIT_TASK_URL,
-    hideInMenu: true,
-    Component: EditTaskPage,
-  },
-  {
-    path: urls.TASK_URL,
-    hideInMenu: true,
-    title: 'Tasks',
-    Component: TasksPage
-  },
-  {
-    path: '/tasks/:projectId',
-    hideInMenu: true,
-    Component: TasksPage
-  },
-  {
-    path: urls.EDIT_PROJECT_URL,
-    hideInMenu: true,
-    Component: EditProjectPage,
-  },
+    {
+        path: '/',
+        title: 'Main',
+        Component: MainPage,
+    },
+    {
+        path: urls.PROJECTS_URL,
+        hideInMenu: true,
+        title: 'Projects',
+        Component: ProjectsPage,
+    },
+    {
+        path: urls.NEW_PROJECT_URL,
+        hideInMenu: true,
+        Component: NewProjectPage,
+    },
+    {
+        path: urls.NEW_TASK_URL,
+        hideInMenu: true,
+        Component: NewTaskPage,
+    },
+    {
+        path: urls.EDIT_TASK_URL,
+        hideInMenu: true,
+        Component: EditTaskPage,
+    },
+    {
+        path: urls.TASK_URL,
+        hideInMenu: true,
+        title: 'Tasks',
+        Component: TasksPage
+    },
+    {
+        path: '/tasks/:projectId',
+        hideInMenu: true,
+        Component: TasksPage
+    },
+    {
+        path: urls.EDIT_PROJECT_URL,
+        hideInMenu: true,
+        Component: EditProjectPage,
+    },
 ];

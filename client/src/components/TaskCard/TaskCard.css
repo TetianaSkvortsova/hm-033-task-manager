@@ -19,7 +19,7 @@
   font-size: 1.1rem;
   color: var(--accent-cyan);
   margin-bottom: 15px;
-  width: 215px;
+  padding-right: 40px;
 }
 
 .TaskCard p {

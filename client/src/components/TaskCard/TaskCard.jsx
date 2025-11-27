@@ -1,46 +1,51 @@
 import PriorityLabel from '../PriorityLabel/PriorityLabel';
 import './TaskCard.css';
 import ActionMenu from "../ActionMenu/ActionMenu.jsx";
-import { useDispatch } from "react-redux";
-// ПОТРІБЕН ІМПОРТ З НОВОСТВОРЕНОГО ФАЙЛУ store/features/tasks.js
-import { deleteTaskAsync, getTaskByIdAsync } from '../../store/features/tasks';
-import { useNavigate } from "react-router";
+import {useDispatch} from "react-redux";
+import {deleteTaskAsync, getTaskByIdAsync} from '../../store/features/tasks';
+import {useNavigate} from "react-router";
+import {useState} from "react";
+import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog.jsx";
 
 export default function TaskCard({id, title, description, priority}) {
     const dispatch = useDispatch();
     const navigate = useNavigate(); // Для переходу на сторінку редагування таски
+    const [openConfirm, setOpenConfirm] = useState(false);
 
-    // Обробник для редагування таски
     const handleEditTask = () => {
-        // Завантажуємо таску в Redux-стан (currentTask) та перенаправляємо
-        // ВАЖЛИВО: Хоча ми dispatch getTaskByIdAsync тут, для Redux-Form в компоненті EditTaskPage буде зручніше.
         dispatch(getTaskByIdAsync(id));
-        navigate(`/tasks/edit/${id}`); // СТВОРІТЬ ЦЕЙ МАРШРУТ У menu.js!
-        console.log(`Navigating to edit task with ID: ${id}`);
+        navigate(`/tasks/edit/${id}`);
     };
 
-    // Обробник для видалення таски
     const handleDeleteTask = () => {
-        // В ідеалі тут має бути діалогове вікно підтвердження перед dispatch
-        if (window.confirm("Are you sure you want to delete this task?")) {
-            // Викликаємо асинхронний Thunk для видалення
-            dispatch(deleteTaskAsync(id));
-        }
+        dispatch(deleteTaskAsync(id));
+        setOpenConfirm(false);
     };
 
-    // ПРИМІТКА: Ми передаємо ці обробники в ActionMenu
+    const handleCloseConfirm = (event) => {
+        event.stopPropagation();
+        setOpenConfirm(false);
+    };
+
     return (
         <div className='TaskCard'>
-            {/* onEdit та onDelete передаються з TaskCard в ActionMenu */}
             <ActionMenu
                 onEdit={handleEditTask}
-                onDelete={handleDeleteTask}
+                onDelete={() => setOpenConfirm(true)}
             />
             <h3>{title}</h3>
             <PriorityLabel priority={priority}/>
             <p>
                 {description.slice(0, 100)}
             </p>
+            <ConfirmationDialog
+                open={openConfirm}
+                onClose={handleCloseConfirm}
+                onConfirm={handleDeleteTask}
+                title={"Confirm Task Deletion"}
+                description={"Are you sure you want to permanently delete this task? This action cannot be undone."}
+                confirmText="Delete Task"
+            />
         </div>
     )
 }

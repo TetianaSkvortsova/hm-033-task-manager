@@ -1,5 +1,4 @@
 export const ASSIGNEES = [
-    { id: 'unassigned', name: 'Unassigned' },
     { id: 'user-001', name: 'Alice Smith' },
     { id: 'user-002', name: 'Bob Johnson' },
     { id: 'user-003', name: 'Charlie Brown' },

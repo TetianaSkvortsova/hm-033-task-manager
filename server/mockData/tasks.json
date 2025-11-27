@@ -1,29 +1,11 @@
 [
   {
-    "id": "2918b958-3d19-4b67-827c-3f940843477f",
-    "title": "Develop Landing Page UI - Task 1",
-    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 1)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-009",
-    "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
-  },
-  {
-    "id": "e0d37e5e-e67c-48c2-a9b0-a5796c80218b",
-    "title": "Update Database Schema - Task 2",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 2)",
-    "priority": "MEDIUM",
-    "status": "DONE",
-    "assignee": "user-003",
-    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
-  },
-  {
     "id": "8470a1e3-f661-460d-8380-c1e194553229",
     "title": "Develop Landing Page UI - Task 3",
     "description": "Create high-fidelity prototypes for the new dashboard feature. (Task ID: 3)",
-    "priority": "HIGH",
+    "priority": "MEDIUM",
     "status": "IN_PROGRESS",
-    "assignee": "user-005",
+    "assignee": "user-002",
     "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
   },
   {
@@ -54,15 +36,6 @@
     "projectId": "5e6f7089-a0b1-c2d3-e4f5-a6b7c8d9e0f1"
   },
   {
-    "id": "b1c41b80-16d7-46ef-b9f0-2646d2994961",
-    "title": "Develop Landing Page UI - Task 7",
-    "description": "Automate the deployment process using Docker and Kubernetes. (Task ID: 7)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-004",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "31b017b3-d309-48c0-9988-c47c555d401a",
     "title": "Fix Critical Bug in API - Task 8",
     "description": "Address the reported issue where the server crashes on high load. (Task ID: 8)",
@@ -79,15 +52,6 @@
     "status": "DONE",
     "assignee": "user-001",
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
-  },
-  {
-    "id": "8e3c631e-450b-4876-b333-d89771a39f99",
-    "title": "Fix Critical Bug in API - Task 10",
-    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 10)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-003",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "402e485d-8557-4b10-911e-b83d1c1c737f",
@@ -147,19 +111,10 @@
     "id": "3185348b-3e11-4475-9c81-807a0c0e7d54",
     "title": "Design New Feature Mockups - Task 17",
     "description": "Ensure secure login and registration functionality using JWT. (Task ID: 17)",
-    "priority": "MEDIUM",
+    "priority": "LOW",
     "status": "TODO",
     "assignee": "user-008",
     "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
-  },
-  {
-    "id": "b34e568f-9d90-4a81-9b69-807d9f2b8a71",
-    "title": "Fix Critical Bug in API - Task 18",
-    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 18)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-007",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "c62a048a-676d-473d-82d8-500e5e019a0a",
@@ -207,15 +162,6 @@
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
   },
   {
-    "id": "a5762d64-4f40-4b66-8806-d284a1a5b812",
-    "title": "Write Unit Tests for Service X - Task 24",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 24)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-004",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "1a166a98-8e6d-472e-8d8d-563560d2109e",
     "title": "Fix Critical Bug in API - Task 25",
     "description": "Add new field for 'due_date' in the tasks table. (Task ID: 25)",
@@ -232,15 +178,6 @@
     "status": "TODO",
     "assignee": "user-001",
     "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
-  },
-  {
-    "id": "c71e9a2b-b6b8-472e-8120-e22e5a5796f3",
-    "title": "Write Unit Tests for Service X - Task 27",
-    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 27)",
-    "priority": "MEDIUM",
-    "status": "DONE",
-    "assignee": "user-009",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "62e148e1-5e82-4213-91c6-2184e55581a6",
@@ -277,15 +214,6 @@
     "status": "IN_PROGRESS",
     "assignee": "user-001",
     "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
-  },
-  {
-    "id": "c62a048a-666d-473d-82d8-500e5e019a0a",
-    "title": "Fix Critical Bug in API - Task 32",
-    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 32)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-003",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "522d0d01-1e9d-4738-89c0-67258b3554e2",
@@ -351,15 +279,6 @@
     "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
   },
   {
-    "id": "c71e9a2b-b6b8-472e-8120-e22e5a5196f3",
-    "title": "Fix Critical Bug in API - Task 40",
-    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 40)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-007",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "62e148e1-5e82-4113-91c6-2184e55581a6",
     "title": "Implement User Authentication - Task 41",
     "description": "Address the reported issue where the server crashes on high load. (Task ID: 41)",
@@ -405,15 +324,6 @@
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
   },
   {
-    "id": "523d0d01-1e9d-4738-89c0-67258b3554e2",
-    "title": "Write Unit Tests for Service X - Task 46",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 46)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-004",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "184d0087-0b19-5b6e-a222-381440d9b4c0",
     "title": "Fix Critical Bug in API - Task 47",
     "description": "Add new field for 'due_date' in the tasks table. (Task ID: 47)",
@@ -430,15 +340,6 @@
     "status": "TODO",
     "assignee": "user-001",
     "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
-  },
-  {
-    "id": "3139268f-f77e-4911-9257-814d2e74e303",
-    "title": "Write Unit Tests for Service X - Task 49",
-    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 49)",
-    "priority": "MEDIUM",
-    "status": "DONE",
-    "assignee": "user-009",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "a5762d64-4f40-4b66-8806-d284a1a5b822",
@@ -475,15 +376,6 @@
     "status": "IN_PROGRESS",
     "assignee": "user-001",
     "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
-  },
-  {
-    "id": "62e148e1-5e82-4113-97c6-2184e55581a6",
-    "title": "Fix Critical Bug in API - Task 54",
-    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 54)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-003",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "62b78d2b-65c3-4d7c-87b6-193f443b749d",
@@ -549,15 +441,6 @@
     "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
   },
   {
-    "id": "f5108f91-5a3d-4250-93c6-e41c40212f45",
-    "title": "Fix Critical Bug in API - Task 62",
-    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 62)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-007",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "c979d3b4-e35f-4d92-95f7-f83690d56c07",
     "title": "Implement User Authentication - Task 63",
     "description": "Address the reported issue where the server crashes on high load. (Task ID: 63)",
@@ -603,15 +486,6 @@
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
   },
   {
-    "id": "b78b0561-125d-4f6c-8386-350711909772",
-    "title": "Write Unit Tests for Service X - Task 68",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 68)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-004",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "67a30386-8947-494b-9e4a-959772183c74",
     "title": "Fix Critical Bug in API - Task 69",
     "description": "Add new field for 'due_date' in the tasks table. (Task ID: 69)",
@@ -628,15 +502,6 @@
     "status": "TODO",
     "assignee": "user-001",
     "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
-  },
-  {
-    "id": "a933f782-b7f7-4638-9588-e215f3358043",
-    "title": "Write Unit Tests for Service X - Task 71",
-    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 71)",
-    "priority": "MEDIUM",
-    "status": "DONE",
-    "assignee": "user-009",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "9b1c7c9c-2980-45fa-9481-2c0920401815",
@@ -673,15 +538,6 @@
     "status": "IN_PROGRESS",
     "assignee": "user-001",
     "projectId": "89a0b1c2-d3e4-f5a6-b7c8-d9e0f1g2h3i4"
-  },
-  {
-    "id": "a1811559-7157-4180-8736-b6058e376a9a",
-    "title": "Fix Critical Bug in API - Task 76",
-    "description": "Achieve 80% test coverage for the core business logic. (Task ID: 76)",
-    "priority": "LOW",
-    "status": "TODO",
-    "assignee": "user-003",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
   },
   {
     "id": "276b911a-1d12-4f36-a36c-945281432f4c",
@@ -747,15 +603,6 @@
     "projectId": "1a2b3c4d-5e6f-7089-a0b1-c2d3e4f5a6b7"
   },
   {
-    "id": "1d8b96d9-f472-466d-b8d9-23c34e7c7a7c",
-    "title": "Fix Critical Bug in API - Task 84",
-    "description": "Create a responsive and visually appealing user interface for the main page. (Task ID: 84)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-007",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "f5108f91-5a3d-4250-93c6-e41c40212f46",
     "title": "Implement User Authentication - Task 85",
     "description": "Address the reported issue where the server crashes on high load. (Task ID: 85)",
@@ -801,15 +648,6 @@
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
   },
   {
-    "id": "33246f90-1e5b-432d-947f-8d76d47b565b",
-    "title": "Write Unit Tests for Service X - Task 90",
-    "description": "Ensure secure login and registration functionality using JWT. (Task ID: 90)",
-    "priority": "LOW",
-    "status": "IN_PROGRESS",
-    "assignee": "user-004",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "b78b0561-125d-4f6c-8386-350711909773",
     "title": "Fix Critical Bug in API - Task 91",
     "description": "Add new field for 'due_date' in the tasks table. (Task ID: 91)",
@@ -828,17 +666,35 @@
     "projectId": "3c4d5e6f-7089-a0b1-c2d3-e4f5a6b7c8d9"
   },
   {
-    "id": "91866373-3164-4e20-80a2-25e59b2d8619",
-    "title": "Write Unit Tests for Service X - Task 93",
-    "description": "Provide thorough feedback on the submitted code changes. (Task ID: 93)",
-    "priority": "MEDIUM",
-    "status": "DONE",
-    "assignee": "user-009",
-    "projectId": "6f7089a0-b1c2-d3e4-f5a6-b7c8d9e0f1g2"
-  },
-  {
     "id": "a933f782-b7f7-4638-9588-e215f3358044",
     "title": "Develop Landing Page UI - Task 94",
     "description": "Modernize outdated parts of the system to improve maintainability. "
+  },
+  {
+    "id": "7af6f3ee-939a-4275-9125-7e32ab6f571d",
+    "title": "jkdvhkjvsk",
+    "description": "hvdhfvgdk kjhfkgf",
+    "priority": "HIGH",
+    "status": "todo",
+    "assignee": "user-002",
+    "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
+  },
+  {
+    "id": "0540463e-c2cc-4fa2-a43b-77fdbb583a2b",
+    "title": "fdhghdk",
+    "description": "fjhdo dfjgdk",
+    "priority": "LOW",
+    "status": "todo",
+    "assignee": "user-003",
+    "projectId": "4d5e6f70-89a0-b1c2-d3e4-f5a6b7c8d9e0"
+  },
+  {
+    "id": "a89903c8-c2d7-47f2-b3b8-224247ecb138",
+    "title": "Test 10 ",
+    "description": "bdfjgd djfgdj",
+    "priority": "MEDIUM",
+    "status": "todo",
+    "assignee": "user-007",
+    "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
   }
 ]

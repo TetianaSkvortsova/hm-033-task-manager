@@ -10,56 +10,29 @@ import {
 import MoreVertIcon from '@mui/icons-material/MoreVert'; // Три вертикальні крапки
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import {useDispatch} from "react-redux";
-import {deleteProjectAsync, getProjectByIdAsync} from "../../store/features/projects.js";
-import {useNavigate} from "react-router";
-import {urls} from "../../common/menu.js";
-import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog.jsx";
 
 function ActionMenu({onEdit, onDelete}) {
-    // const dispatch = useDispatch();
-    // const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null);
-    // const [openConfirm, setOpenConfirm] = useState(false);
     const open = Boolean(anchorEl);
 
-    // Обробник відкриття меню
     const handleClick = (event) => {
         event.stopPropagation();
         setAnchorEl(event.currentTarget);
     };
 
-    // Обробник закриття меню
     const handleClose = (event) => {
         event.stopPropagation();
         setAnchorEl(null);
     };
 
-    // Обробники дій
     const handleEdit = (event) => {
         event.stopPropagation();
-       /* const editUrl = urls.EDIT_PROJECT_URL.replace(':projectId', id);
-        dispatch(getProjectByIdAsync(id));
-        navigate(editUrl);
-        console.log(id);*/
         handleClose(event);
         onEdit && onEdit();
     };
 
-    /*const handleOpenConfirm = (event) => {
-        event.stopPropagation();
-        handleClose(event); // Закриваємо меню
-        setOpenConfirm(true); // Відкриваємо діалог
-    };*/
-
-   /* const handleCloseConfirm = (event) => {
-        event.stopPropagation();
-        setOpenConfirm(false);
-    };*/
-
     const handleDelete = (event) => {
         event.stopPropagation();
-        // dispatch(deleteProjectAsync(id));
         handleClose(event);
         onDelete && onDelete();
     };
@@ -96,10 +69,9 @@ function ActionMenu({onEdit, onDelete}) {
             <Menu
                 id="action-menu"
                 anchorEl={anchorEl}
-                open={open} // Чи відкрите меню (залежить від стану `anchorEl`)
-                onClose={handleClose} // Викликається при кліку поза меню або натисканні Esc
+                open={open}
+                onClose={handleClose}
 
-                // Стилізація самого меню (наприклад, колір фону)
                 PaperProps={{
                     sx: {
                         backgroundColor: '#333b4a', // Темний фон для меню
@@ -107,7 +79,6 @@ function ActionMenu({onEdit, onDelete}) {
                         boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)', // Тінь
                     },
                 }}
-                // Вертикальне розташування, щоб відкривалося над кнопкою
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'right',
@@ -117,14 +88,12 @@ function ActionMenu({onEdit, onDelete}) {
                     horizontal: 'right',
                 }}
             >
-                {/* 3. ПУНКТ МЕНЮ: РЕДАГУВАТИ */}
                 <MenuItem
                     onClick={handleEdit}
-                    disableRipple={true} // Вимикаємо ripple на елементі меню
+                    disableRipple={true}
                     sx={{
-                        color: '#ffffff', // Білий текст
-                        minWidth: 150, // Мінімальна ширина
-                        // Стилі hover для елемента меню: робимо фон світлішим
+                        color: '#ffffff',
+                        minWidth: 150,
                         '&:hover': {
                             backgroundColor: '#444d60',
                         },
@@ -136,13 +105,11 @@ function ActionMenu({onEdit, onDelete}) {
                     <ListItemText>Edit</ListItemText>
                 </MenuItem>
 
-                {/* 4. ПУНКТ МЕНЮ: ВИДАЛИТИ */}
                 <MenuItem
                     onClick={handleDelete}
-                    disableRipple={true} // Вимикаємо ripple на елементі меню
+                    disableRipple={true}
                     sx={{
                         color: '#ffffff',
-                        // Стилі hover для елемента меню: робимо фон світлішим
                         '&:hover': {
                             backgroundColor: '#444d60',
                         },
@@ -154,14 +121,6 @@ function ActionMenu({onEdit, onDelete}) {
                     <ListItemText>Delete</ListItemText>
                 </MenuItem>
             </Menu>
-            {/*<ConfirmationDialog
-                open={openConfirm}
-                onClose={handleCloseConfirm}
-                onConfirm={handleConfirmDelete}
-                title={"Confirm Project Deletion"}
-                description={"Are you sure you want to permanently delete this project? This action cannot be undone and will also delete all associated tasks."}
-                confirmText="Delete Project"
-            />*/}
         </Box>
     );
 }
