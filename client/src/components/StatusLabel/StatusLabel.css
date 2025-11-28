@@ -1,0 +1,24 @@
+.TaskStatus {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bg-secondary);
+    margin-right: 8px;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+.TaskStatus--TODO {
+    background-color: var(--accent-cyan);
+}
+
+.TaskStatus--IN_PROGRESS {
+    background-color: #FFA500;
+}
+
+.TaskStatus--DONE {
+    background-color: var(--accent-green);
+}

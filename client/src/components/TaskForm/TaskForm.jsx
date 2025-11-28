@@ -8,6 +8,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {createTaskAsync, updateTaskAsync} from "../../store/features/tasks.js";
 import {useNavigate} from "react-router"; // Import minimal styling for error messages
 import {urls} from '../../common/menu';
+import {STATUS} from "../../common/status.js";
 
 const TaskSchema = Yup.object().shape({
     title: Yup.string()
@@ -17,6 +18,9 @@ const TaskSchema = Yup.object().shape({
     description: Yup.string()
         .min(10, 'Description is too short (min 10 chars)')
         .required('Description is required'),
+    status: Yup.string()
+        .oneOf(Object.keys(STATUS), 'Invalid Priority selected')
+        .required('Priority is required'),
     priority: Yup.string()
         .oneOf(Object.keys(PRIORITIES), 'Invalid Priority selected')
         .required('Priority is required'),
@@ -47,7 +51,7 @@ function TaskForm({initialData = {}}) {
             description: initialData.description || '',
             priority: initialData.priority || Object.keys(PRIORITIES)[0],
             status: initialData.status || 'todo',
-            assignee: initialData.assignee || ASSIGNEES.map(assignee => assignee.id),
+            assignee: initialData.assignee || '',
             projectId: initialData.projectId || '',
         },
         validationSchema: TaskSchema,
@@ -64,7 +68,6 @@ function TaskForm({initialData = {}}) {
         },
         enableReinitialize: true,
     });
-
     const getError = (field) => {
         return formik.touched[field] && formik.errors[field] ? formik.errors[field] : null;
     };
@@ -105,6 +108,25 @@ function TaskForm({initialData = {}}) {
                     ></textarea>
                     {getError('description') && (
                         <div className="error-message">{getError('description')}</div>
+                    )}
+                </div>
+
+                <div className='form-group'>
+                    <label htmlFor="status">Status</label>
+                    <select
+                        id="status"
+                        name="status"
+                        value={formik.values.status}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        className={getError('status') ? 'select-error' : ''}
+                    >
+                        {Object.entries(STATUS).map(([key, value]) => (
+                            <option key={key} value={key}>{value}</option>
+                        ))}
+                    </select>
+                    {getError('status') && (
+                        <div className="error-message">{getError('status')}</div>
                     )}
                 </div>
 

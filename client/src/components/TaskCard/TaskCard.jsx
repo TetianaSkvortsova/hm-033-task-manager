@@ -6,8 +6,9 @@ import {deleteTaskAsync, getTaskByIdAsync} from '../../store/features/tasks';
 import {useNavigate} from "react-router";
 import {useState} from "react";
 import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog.jsx";
+import StatusLabel from "../StatusLabel/StatusLabel.jsx";
 
-export default function TaskCard({id, title, description, priority}) {
+export default function TaskCard({id, title, description, priority, status}) {
     const dispatch = useDispatch();
     const navigate = useNavigate(); // Для переходу на сторінку редагування таски
     const [openConfirm, setOpenConfirm] = useState(false);
@@ -34,10 +35,12 @@ export default function TaskCard({id, title, description, priority}) {
                 onDelete={() => setOpenConfirm(true)}
             />
             <h3>{title}</h3>
+
             <PriorityLabel priority={priority}/>
             <p>
                 {description.slice(0, 100)}
             </p>
+            <StatusLabel status={status} />
             <ConfirmationDialog
                 open={openConfirm}
                 onClose={handleCloseConfirm}
