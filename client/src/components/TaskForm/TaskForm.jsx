@@ -50,7 +50,7 @@ function TaskForm({initialData = {}}) {
             title: initialData.title || '',
             description: initialData.description || '',
             priority: initialData.priority || Object.keys(PRIORITIES)[0],
-            status: initialData.status || 'todo',
+            status: initialData.status || Object.keys(STATUS)[0],
             assignee: initialData.assignee || '',
             projectId: initialData.projectId || '',
         },

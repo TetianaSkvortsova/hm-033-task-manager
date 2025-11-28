@@ -52,5 +52,11 @@
     "title": "Client Feedback Collection System",
     "description": "Implement a new automated system for collecting feedback immediately after project completion. Integrate with the support ticket system.",
     "priority": "MEDIUM"
+  },
+  {
+    "id": "a95a258b-2130-4d54-b6f5-769acb17b046",
+    "title": "New project",
+    "description": "Test to create a new project",
+    "priority": "HIGH"
   }
 ]

@@ -687,5 +687,14 @@
     "status": "todo",
     "assignee": "user-007",
     "projectId": "9a0b1c2d-3e4f-5a6b-7c8d-9e0f1g2h3i4j5"
+  },
+  {
+    "id": "94757856-f68e-48e2-b47e-5c0d94d7c943",
+    "title": "New task",
+    "description": "Test to attach this task to the new project",
+    "priority": "HIGH",
+    "status": "TODO",
+    "assignee": "user-003",
+    "projectId": "a95a258b-2130-4d54-b6f5-769acb17b046"
   }
 ]

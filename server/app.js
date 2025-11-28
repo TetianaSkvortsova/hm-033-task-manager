@@ -52,6 +52,8 @@ app.post('/projects', (request, response) => {
         ...data,
     };
     projectsMock.push(newProject);
+    saveFileAsync('./mockData/projects.json', projectsMock);
+
     return response.send(newProject);
 })
 
