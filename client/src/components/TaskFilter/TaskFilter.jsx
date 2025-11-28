@@ -23,7 +23,7 @@ function TaskFilter() {
             <Autocomplete
                 disablePortal
                 options={projects}
-                getOptionLabel={(option) => option.title || ''}
+                getOptionLabel={(projects) => projects.title || ''}
                 onChange={(event, newValue) => {
                     setSelectedProject(newValue);
                 }}

@@ -13,7 +13,7 @@
     "title": "Review Pull Request #123 - Task 4",
     "description": "Address the reported issue where the server crashes on high load. (Task ID: 4)",
     "priority": "HIGH",
-    "status": "TODO",
+    "status": "IN_PROGRESS",
     "assignee": "user-006",
     "projectId": "a0b1c2d3-e4f5-a6b7-c8d9-e0f1g2h3i4j6"
   },
