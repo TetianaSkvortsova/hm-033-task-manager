@@ -5,6 +5,7 @@ import TaskCard from '../../components/TaskCard/TaskCard';
 import {useEffect} from 'react';
 import {getTasksAsync} from '../../store/features/tasks';
 import {urls} from "../../common/menu.js";
+import TaskFilter from "../../components/TaskFilter/TaskFilter.jsx";
 
 export default function TasksPage() {
     const {data: tasks} = useSelector(state => state.tasks);
@@ -22,7 +23,10 @@ export default function TasksPage() {
 
     return (
         <div className='TasksPage'>
-            <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
+            <div className='TasksPage__Header'>
+                <TaskFilter />
+                <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
+            </div>
             <div className="Tasks">
                 {tasks.length === 0 && <span>No tasks available</span>}
                 {tasks.map(task => (

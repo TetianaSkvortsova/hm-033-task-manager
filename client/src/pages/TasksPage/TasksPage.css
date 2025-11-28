@@ -1,23 +1,41 @@
 .TasksPage {
-  padding: 20px;
+    padding: 20px;
 }
 
-.TasksPage > button {
-  margin-bottom: 30px;
-  font-size: 1.2rem;
-  padding: 12px 25px;
+.TasksPage__Header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center; /* Вирівнює елементи по вертикалі */
+    justify-content: space-between;
+    background-color: #1F2430;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-cyan);
+}
+
+.TasksPage__Header > button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
 }
 
 .Tasks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
 .ProjectsPage > span {
-  display: block;
-  margin-top: 30px;
-  font-size: 1.2rem;
-  color: var(--text-primary);
-  text-align: center;
+    display: block;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.MuiOutlinedInput-notchedOutline.css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline {
+    bottom: 13px;
+}
+
+.css-m3akyc-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment{
+    top: 42%
 }
