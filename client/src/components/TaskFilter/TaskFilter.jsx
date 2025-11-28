@@ -5,19 +5,18 @@ import './TaskFilter.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getTasksAsync} from "../../store/features/tasks.js";
 
-// import top100Films from './top100Films';
-
-function TaskFilter() {
+function TaskFilter({projectId = null}) {
     const dispatch = useDispatch();
     const projects = useSelector(state => state.projects.data);
     const [selectedProject, setSelectedProject] = useState(null);
-    // const [filteredTasks, setFilteredTasks] = useState([])
+    const currentProject = projects.find(project => project.id === projectId);
 
     useEffect(() => {
         if (selectedProject && selectedProject.id) {
             dispatch(getTasksAsync(selectedProject.id));
         } else {
             dispatch(getTasksAsync(null));
+            console.log('null')
         }
     }, [dispatch, selectedProject]);
 
@@ -28,10 +27,9 @@ function TaskFilter() {
                 options={projects}
                 getOptionLabel={(option) => option.title || ''}
                 onChange={(event, newValue) => {
-                    // newValue - це повний об'єкт { id: '...', title: '...' } або null
                     setSelectedProject(newValue);
                 }}
-                value={selectedProject}
+                value={selectedProject || currentProject}
                 sx={{
                     width: 300,
                     '& .MuiOutlinedInput-root': {

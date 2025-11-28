@@ -5,7 +5,7 @@
 .TasksPage__Header {
     margin-bottom: 30px;
     display: flex;
-    align-items: center; /* Вирівнює елементи по вертикалі */
+    align-items: center;
     justify-content: space-between;
     background-color: #1F2430;
     padding: 15px 30px;

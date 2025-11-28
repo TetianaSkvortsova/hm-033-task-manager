@@ -23,10 +23,12 @@ export default function TasksPage() {
 
     return (
         <div className='TasksPage'>
+            {!projectId &&
             <div className='TasksPage__Header'>
-                <TaskFilter />
+                <TaskFilter projectId={projectId}/>
                 <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
             </div>
+            }
             <div className="Tasks">
                 {tasks.length === 0 && <span>No tasks available</span>}
                 {tasks.map(task => (
