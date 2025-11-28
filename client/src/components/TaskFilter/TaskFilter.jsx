@@ -5,18 +5,16 @@ import './TaskFilter.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getTasksAsync} from "../../store/features/tasks.js";
 
-function TaskFilter({projectId = null}) {
+function TaskFilter() {
     const dispatch = useDispatch();
     const projects = useSelector(state => state.projects.data);
     const [selectedProject, setSelectedProject] = useState(null);
-    const currentProject = projects.find(project => project.id === projectId);
 
     useEffect(() => {
         if (selectedProject && selectedProject.id) {
             dispatch(getTasksAsync(selectedProject.id));
         } else {
             dispatch(getTasksAsync(null));
-            console.log('null')
         }
     }, [dispatch, selectedProject]);
 
@@ -29,7 +27,7 @@ function TaskFilter({projectId = null}) {
                 onChange={(event, newValue) => {
                     setSelectedProject(newValue);
                 }}
-                value={selectedProject || currentProject}
+                value={selectedProject}
                 sx={{
                     width: 300,
                     '& .MuiOutlinedInput-root': {

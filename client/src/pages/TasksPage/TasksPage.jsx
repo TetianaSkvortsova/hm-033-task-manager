@@ -25,7 +25,7 @@ export default function TasksPage() {
         <div className='TasksPage'>
             {!projectId &&
             <div className='TasksPage__Header'>
-                <TaskFilter projectId={projectId}/>
+                <TaskFilter />
                 <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
             </div>
             }
