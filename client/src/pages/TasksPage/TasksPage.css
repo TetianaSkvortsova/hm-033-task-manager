@@ -32,10 +32,6 @@
     text-align: center;
 }
 
-.MuiOutlinedInput-notchedOutline.css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline {
-    bottom: 13px;
-}
-
-.css-m3akyc-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-endAdornment{
-    top: 42%
+.task-filter input {
+    margin: 0;
 }

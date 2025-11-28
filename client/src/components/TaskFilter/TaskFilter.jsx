@@ -18,7 +18,7 @@ function TaskFilter() {
     }, [dispatch, selectedProject]);
 
     return (
-        <div>
+        <div className="task-filter">
             <Autocomplete
                 disablePortal
                 options={projects}
