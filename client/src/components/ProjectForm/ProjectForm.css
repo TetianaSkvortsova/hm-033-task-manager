@@ -1,10 +1,10 @@
-/* Basic styling to show validation errors clearly */
 .projectForm {
     width: 500px;
     border: 2px solid var(--accent-cyan);
     padding: 20px;
     margin: 20px auto;
 }
+
 .form-group {
     margin-bottom: 1rem;
     display: flex;
@@ -21,18 +21,18 @@
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%; /* Make inputs full width /
-box-sizing: border-box; / Include padding/border in width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .error-message {
-    color: #dc3545; /* Bootstrap-like red color for errors */
+    color: #dc3545;
     font-size: 0.85rem;
     margin-top: 0.25rem;
 }
 
 .input-error, .select-error {
-    border-color: #dc3545 !important; /* Highlight input border in red */
+    border-color: #dc3545 !important;
     box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.25);
 }
 

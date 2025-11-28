@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import './TaskFilter.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getTasksAsync} from "../../store/features/tasks.js";
 

@@ -166,7 +166,7 @@ app.delete('/tasks/:id', (request, response) => {
 
         return response.status(200).json({
             message: `Task with ID ${id} deleted successfully.`,
-            tasks: tasksData, // Return the updated list
+            tasks: tasksData,
         });
     } else {
         return response.status(404).json({

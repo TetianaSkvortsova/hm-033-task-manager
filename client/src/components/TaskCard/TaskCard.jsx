@@ -10,7 +10,7 @@ import StatusLabel from "../StatusLabel/StatusLabel.jsx";
 
 export default function TaskCard({id, title, description, priority, status, onClick}) {
     const dispatch = useDispatch();
-    const navigate = useNavigate(); // Для переходу на сторінку редагування таски
+    const navigate = useNavigate();
     const [openConfirm, setOpenConfirm] = useState(false);
 
     const handleEditTask = () => {

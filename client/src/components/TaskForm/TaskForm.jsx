@@ -1,12 +1,12 @@
 import React from 'react';
 import {PRIORITIES} from "../../common/priorities.js";
 import {ASSIGNEES} from "../../common/assignees.js";
-import {useFormik} from 'formik'; // Import Formik hook
-import * as Yup from 'yup'; // Import Yup for schema validation
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
 import './TaskForm.css';
 import {useDispatch, useSelector} from "react-redux";
 import {createTaskAsync, updateTaskAsync} from "../../store/features/tasks.js";
-import {useNavigate} from "react-router"; // Import minimal styling for error messages
+import {useNavigate} from "react-router";
 import {urls} from '../../common/menu';
 import {STATUS} from "../../common/status.js";
 

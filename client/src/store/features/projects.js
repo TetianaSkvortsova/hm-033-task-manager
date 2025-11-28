@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-// import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
 const initialState = {
@@ -8,8 +7,8 @@ const initialState = {
   loaded: false,
 };
 
-// const BASE_URL = 'https://hm-033-task-manager.onrender.com';
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+// const BASE_URL = 'http://localhost:3000';
 const PROJECTS_URL = `${BASE_URL}/projects`;
 
 export const getProjectsAsync = createAsyncThunk('projects/getList', async () => {

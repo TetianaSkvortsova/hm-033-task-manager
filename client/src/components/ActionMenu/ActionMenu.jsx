@@ -7,7 +7,7 @@ import {
     ListItemText,
     Box,
 } from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert'; // Три вертикальні крапки
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -42,11 +42,11 @@ function ActionMenu({onEdit, onDelete}) {
             sx={{
                 p: 0,
                 backgroundColor: '#1E2532',
-                border: 'none', // Додаємо рамку
-                position: 'absolute', // Це важливо для розміщення іконки
+                border: 'none',
+                position: 'absolute',
                 right: '15px',
                 display: 'flex',
-                justifyContent: 'flex-end', // Розміщуємо кнопку праворуч
+                justifyContent: 'flex-end',
                 alignItems: 'flex-start',
                 height: 'fit-content',
                 width: 'fit-content',
@@ -61,7 +61,7 @@ function ActionMenu({onEdit, onDelete}) {
                 size="small"
 
                 sx={{
-                    color: '#007bff', // Колір іконки
+                    color: '#007bff',
                 }}
             >
                 <MoreVertIcon/>
@@ -74,9 +74,9 @@ function ActionMenu({onEdit, onDelete}) {
 
                 PaperProps={{
                     sx: {
-                        backgroundColor: '#333b4a', // Темний фон для меню
+                        backgroundColor: '#333b4a',
                         borderRadius: 1,
-                        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)', // Тінь
+                        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.5)',
                     },
                 }}
                 anchorOrigin={{

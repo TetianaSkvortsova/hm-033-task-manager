@@ -1,5 +1,4 @@
-// import { HashRouter} from 'react-router'
-import {BrowserRouter} from 'react-router';
+import {HashRouter} from 'react-router';
 import './App.css'
 import Content from './components/Content/Content'
 import Header from './components/Header/Header'
@@ -23,12 +22,10 @@ function App() {
     }, [dispatch]);
     return (
         <>
-            {/*<HashRouter>*/}
-            <BrowserRouter>
+            <HashRouter>
                 <Header/>
                 <Content/>
-            </BrowserRouter>
-            {/*</HashRouter>*/}
+            </HashRouter>
         </>
     )
 }

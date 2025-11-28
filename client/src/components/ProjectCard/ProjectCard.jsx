@@ -9,7 +9,7 @@ import {useNavigate} from "react-router";
 
 export default function ProjectCard({id, title, description, priority, onClick}) {
     const dispatch = useDispatch();
-    const navigate = useNavigate(); // Для переходу на сторінку редагування
+    const navigate = useNavigate();
     const [openConfirm, setOpenConfirm] = useState(false);
     const handleClick = () => {
         onClick && onClick(id);
