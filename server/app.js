@@ -9,7 +9,7 @@ import { writeFile } from 'fs/promises';
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: '*'}));
 
 function md5(content) {
     return createHash('md5').update(content).digest('base64');
