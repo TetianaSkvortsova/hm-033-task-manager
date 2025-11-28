@@ -1,0 +1,83 @@
+/* task-view */
+
+.task-view {
+    /* Основний контейнер, центрований на сторінці */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-secondary); /* Фон як у карточок */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #E0E0E0; /* Загальний світлий текст */
+}
+
+/* Заголовок таски */
+.task-view .title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-cyan); /* Акцентний колір */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Опис таски */
+.task-view .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #B0B0B0;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--accent-green);
+    border-radius: 4px;
+}
+
+/* Стилі для рядка інформації (статус, пріоритет, виконавець, проект) */
+.task-view .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Дві колонки */
+    gap: 20px 40px;
+    margin-top: 20px;
+}
+
+/* Стилі для кожного окремого елемента інформації */
+.task-view .info-item {
+    padding: 10px 0;
+}
+
+/* Загальний стиль для міток (назви полів) */
+.task-view .info-item-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Загальний стиль для значень полів */
+.task-view .info-item-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #E0E0E0;
+}
+
+/* Спеціальний стиль для статусу (якщо не використовується окремий компонент StatusLabel) */
+.task-view .status .info-item-value {
+    font-weight: bold;
+    color: #FFA500; /* IN_PROGRESS */
+}
+
+/* Спеціальний стиль для пріоритету (якщо не використовується окремий компонент PriorityLabel) */
+.task-view .priority .info-item-value {
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* Стиль для імені проекту та виконавця */
+.task-view .project .info-item-value,
+.task-view .assignee .info-item-value {
+    color: #B0B0B0;
+    font-style: italic;
+}

@@ -8,7 +8,7 @@ import {useState} from "react";
 import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog.jsx";
 import StatusLabel from "../StatusLabel/StatusLabel.jsx";
 
-export default function TaskCard({id, title, description, priority, status}) {
+export default function TaskCard({id, title, description, priority, status, onClick}) {
     const dispatch = useDispatch();
     const navigate = useNavigate(); // Для переходу на сторінку редагування таски
     const [openConfirm, setOpenConfirm] = useState(false);
@@ -29,7 +29,7 @@ export default function TaskCard({id, title, description, priority, status}) {
     };
 
     return (
-        <div className='TaskCard'>
+        <div className='TaskCard' onClick = {() => onClick && onClick(id)}>
             <ActionMenu
                 onEdit={handleEditTask}
                 onDelete={() => setOpenConfirm(true)}

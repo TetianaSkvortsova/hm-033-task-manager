@@ -6,7 +6,6 @@ import {useState} from "react";
 import {deleteProjectAsync, getProjectByIdAsync} from "../../store/features/projects.js";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router";
-import {urls} from "../../common/menu.js";
 
 export default function ProjectCard({id, title, description, priority, onClick}) {
     const dispatch = useDispatch();

@@ -16,13 +16,17 @@ export default function TasksPage() {
         dispatch(getTasksAsync(projectId));
     }, [dispatch, projectId]);
 
+    const handleClick = (taskId) => {
+        navigate(`/tasks/view/${taskId}`);
+    }
+
     return (
         <div className='TasksPage'>
             <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
             <div className="Tasks">
                 {tasks.length === 0 && <span>No tasks available</span>}
                 {tasks.map(task => (
-                    <TaskCard key={task.id} {...task} />
+                    <TaskCard key={task.id} {...task} onClick={handleClick}/>
                 ))}
             </div>
         </div>
