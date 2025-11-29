@@ -8,6 +8,7 @@ import {createHash} from 'node:crypto';
 import { writeFile } from 'fs/promises';
 
 const apiPrefix = '/api/';
+let projectsData = projectsMock;
 
 const app = express();
 app.use(express.json());
@@ -51,7 +52,7 @@ async function saveFileAsync(filename, data) {
 }
 
 router.get('/projects', (request, response) => {
-    return response.json(projectsMock);
+    return response.json(projectsData);
 });
 
 router.post('/projects', async (request, response) => {
@@ -60,8 +61,8 @@ router.post('/projects', async (request, response) => {
         id: uuidv4(),
         ...data,
     };
-    projectsMock.push(newProject);
-    await saveFileAsync('./mockData/projects.json', projectsMock);
+    projectsData.push(newProject);
+    await saveFileAsync('./mockData/projects.json', projectsData);
 
     return response.send(newProject);
 })
@@ -102,17 +103,17 @@ router.get('/user-info', (request, response) => {
 
 router.delete('/projects/:id', async (request, response) => {
     const {id} = request.params;
-    const index = projectsMock.findIndex(project => project.id === id);
+    const index = projectsData.findIndex(project => project.id === id);
     if (index !== -1) {
-        projectsMock.splice(index, 1);
+        projectsData.splice(index, 1);
         const filteredTasks = tasksData.filter(task => task.projectId !== id);
-        await saveFileAsync('./mockData/projects.json', projectsMock);
+        await saveFileAsync('./mockData/projects.json', projectsData);
         await saveFileAsync('./mockData/tasks.json', filteredTasks);
 
         return response.status(200).json({
             message: `Project with ID ${id} deleted successfully.`,
-            newProjectsCount: projectsMock.length,
-            projects: projectsMock,
+            newProjectsCount: projectsData.length,
+            projects: projectsData,
             tasks: filteredTasks
         });
     } else {
@@ -124,10 +125,10 @@ router.delete('/projects/:id', async (request, response) => {
 
 router.get('projects/:id', (request, response) => {
     const {id} = request.params;
-    const projectData = projectsMock.find(project => project.id === id);
+    const projectData = projectsData.find(project => project.id === id);
     return response.status(200).json({
         message: `Project with ID ${id}.`,
-        projectCount: projectsMock.length,
+        projectCount: projectsData.length,
         project: projectData,
     });
 })
@@ -135,17 +136,17 @@ router.get('projects/:id', (request, response) => {
 router.put('/projects/:id', async (request, response) => {
     const updateData = request.body;
     const projectId = request.params.id;
-    const indexProject = projectsMock.findIndex(project => project.id === updateData.id);
-    projectsMock[indexProject] = {
-        ...projectsMock[indexProject],
+    const indexProject = projectsData.findIndex(project => project.id === updateData.id);
+    projectsData[indexProject] = {
+        ...projectsData[indexProject],
         ...updateData,
         id: projectId
     };
-    await saveFileAsync('./mockData/projects.json', projectsMock);
+    await saveFileAsync('./mockData/projects.json', projectsData);
     return response.status(200).json({
         message: `Project with ID ${projectId}.`,
-        projectCount: projectsMock.length,
-        project: projectsMock[indexProject],
+        projectCount: projectsData.length,
+        project: projectsData[indexProject],
     });
 })
 
