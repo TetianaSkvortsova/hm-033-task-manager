@@ -52,47 +52,5 @@
     "title": "Client Feedback Collection System",
     "description": "Implement a new automated system for collecting feedback immediately after project completion. Integrate with the support ticket system.",
     "priority": "MEDIUM"
-  },
-  {
-    "id": "a95a258b-2130-4d54-b6f5-769acb17b046",
-    "title": "New project",
-    "description": "Test to create a new project",
-    "priority": "HIGH"
-  },
-  {
-    "id": "48e3d28f-d603-48fd-9d20-ed3f68305e34",
-    "title": "asdasdasd",
-    "description": "asdasd dasdsadsa",
-    "priority": "HIGH"
-  },
-  {
-    "id": "c2457edc-4a2d-4948-8b48-4dab1aabde0d",
-    "title": "asdasdasd",
-    "description": "asda sd as da",
-    "priority": "HIGH"
-  },
-  {
-    "id": "ec5ead0b-1a4c-473a-b6d7-babe210925e6",
-    "title": "saasda sda sdas da",
-    "description": "sa das das",
-    "priority": "HIGH"
-  },
-  {
-    "id": "b0dc45b0-e159-4b5a-911e-814801190062",
-    "title": "asdasd ad asd",
-    "description": "as d as asda sd",
-    "priority": "HIGH"
-  },
-  {
-    "id": "767a6781-e68f-41d0-88cb-158e43c3546d",
-    "title": "asdasd asd asd",
-    "description": "as das das dsa",
-    "priority": "HIGH"
-  },
-  {
-    "id": "c95709c9-6a02-4483-aa3c-a6a4a282b351",
-    "title": "12312321",
-    "description": "213123 3 213 12",
-    "priority": "HIGH"
   }
 ]

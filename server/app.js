@@ -1,16 +1,13 @@
-import express from 'express';
+import express, {json} from 'express';
 import cors from 'cors';
 import {v4 as uuidv4} from 'uuid';
-import projectsMock from './mockData/projects.json' with { type: 'json' };
 import tasksData from './mockData/tasks.json' with { type: 'json' };
 import {usersData} from './mockData/users.js';
 import {createHash} from 'node:crypto';
-import { writeFile } from 'fs/promises';
+import { writeFile, readFile } from 'fs/promises';
 
 const apiPrefix = '/api/';
-let projectsData = [
-    ...projectsMock
-];
+let projectsData = [];
 
 const app = express();
 app.use(express.json());
@@ -39,6 +36,15 @@ function findUserAndVerify(login, password) {
         return user;
     } else {
         return null;
+    }
+}
+
+async function readFileAsync(filename) {
+    try {
+        projectsData = JSON.parse(await readFile(filename, {encoding: 'utf-8', flag: 'r+'}));
+        console.log(`Дані успішно прочитані з: ${filename}`);
+    } catch (error) {
+        console.error("Помилка при читанні файлу:", error);
     }
 }
 
@@ -211,9 +217,15 @@ router.put('/tasks/:id', async (request, response) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-});
 
 // console.log(md5('mysPassword1'));
 // console.log(md5('mysPassword2'));
+
+async function startServer() {
+    await readFileAsync('./mockData/projects.json');
+    app.listen(PORT, () => {
+        console.log(`Server listening on port ${PORT}`);
+    });
+}
+
+startServer();
