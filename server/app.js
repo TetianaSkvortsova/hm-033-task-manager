@@ -51,19 +51,17 @@ async function saveFileAsync(filename, data) {
 }
 
 router.get('/projects', (request, response) => {
-    response.set('X-Custom-Header-One', 'CustomValue1');
     return response.json(projectsMock);
 });
 
-router.post('/projects', (request, response) => {
-    response.set('X-Custom-Header-One', 'CustomValue1');
+router.post('/projects', async (request, response) => {
     const data = request.body;
     const newProject = {
         id: uuidv4(),
         ...data,
     };
     projectsMock.push(newProject);
-    saveFileAsync('./mockData/projects.json', projectsMock);
+    await saveFileAsync('./mockData/projects.json', projectsMock);
 
     return response.send(newProject);
 })
@@ -134,7 +132,7 @@ router.get('projects/:id', (request, response) => {
     });
 })
 
-router.put('/projects/:id', (request, response) => {
+router.put('/projects/:id', async (request, response) => {
     const updateData = request.body;
     const projectId = request.params.id;
     const indexProject = projectsMock.findIndex(project => project.id === updateData.id);
@@ -143,7 +141,7 @@ router.put('/projects/:id', (request, response) => {
         ...updateData,
         id: projectId
     };
-    saveFileAsync('./mockData/projects.json', projectsMock);
+    await saveFileAsync('./mockData/projects.json', projectsMock);
     return response.status(200).json({
         message: `Project with ID ${projectId}.`,
         projectCount: projectsMock.length,
@@ -151,7 +149,7 @@ router.put('/projects/:id', (request, response) => {
     });
 })
 
-router.post('/tasks', (request, response) => {
+router.post('/tasks', async (request, response) => {
     const task = request.body;
     const newTask = {
         id: uuidv4(),
@@ -159,7 +157,7 @@ router.post('/tasks', (request, response) => {
     };
     tasksData.push(newTask);
 
-    saveFileAsync('./mockData/tasks.json', tasksData);
+    await saveFileAsync('./mockData/tasks.json', tasksData);
 
     return response.status(201).json({
         message: 'Task created successfully.',
@@ -167,13 +165,13 @@ router.post('/tasks', (request, response) => {
     });
 });
 
-router.delete('/tasks/:id', (request, response) => {
+router.delete('/tasks/:id', async (request, response) => {
     const { id } = request.params;
     const indexTask = tasksData.findIndex(task => task.id === id);
 
     if (indexTask !== -1) {
         tasksData.splice(indexTask, 1);
-        saveFileAsync('./mockData/tasks.json', tasksData);
+        await saveFileAsync('./mockData/tasks.json', tasksData);
 
         return response.status(200).json({
             message: `Task with ID ${id} deleted successfully.`,
@@ -186,7 +184,7 @@ router.delete('/tasks/:id', (request, response) => {
     }
 });
 
-router.put('/tasks/:id', (request, response) => {
+router.put('/tasks/:id', async (request, response) => {
     const updateData = request.body;
     const taskId = request.params.id;
     const indexTask = tasksData.findIndex(task => task.id === taskId);
@@ -197,7 +195,7 @@ router.put('/tasks/:id', (request, response) => {
             ...updateData,
             id: taskId
         };
-        saveFileAsync('./mockData/tasks.json', tasksData);
+        await saveFileAsync('./mockData/tasks.json', tasksData);
         return response.status(200).json({
             message: `Task with ID ${taskId} updated successfully.`,
             task: tasksData[indexTask],
