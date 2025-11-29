@@ -50,7 +50,7 @@ async function readFileAsync(filename) {
 
 async function saveFileAsync(filename, data) {
     try {
-        const dataToWrite = JSON.stringify(data, null, 2);
+        const dataToWrite = JSON.stringify(structuredClone(data), null, 2);
 
         await writeFile(filename, dataToWrite, 'utf-8');
         console.log(`Дані успішно збережено у файл: ${filename}`);
