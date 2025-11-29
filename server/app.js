@@ -8,7 +8,9 @@ import {createHash} from 'node:crypto';
 import { writeFile } from 'fs/promises';
 
 const apiPrefix = '/api/';
-let projectsData = projectsMock;
+let projectsData = [
+    ...projectsMock
+];
 
 const app = express();
 app.use(express.json());
