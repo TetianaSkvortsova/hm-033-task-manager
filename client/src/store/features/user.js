@@ -5,10 +5,12 @@ import {menuItems} from '../../common/menu';
 const initialState = {
     userData: {}
 };
-const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+// const BASE_URL = 'https://hm-033-task-manager.onrender.com';
 // const BASE_URL = 'http://localhost:3000';
-const AUTH_URL = `${BASE_URL}/auth`;
-const ISAUTH_URL = `${BASE_URL}/user-info`;
+const BASE_URL = import.meta.env.BASE_URL;
+
+const AUTH_URL = `api/auth`;
+const ISAUTH_URL = `api/user-info`;
 export const getUserAsync = createAsyncThunk('user/getUser', async (credentials = {}) => {
     const {login, password, token} = credentials;
     if (token) {

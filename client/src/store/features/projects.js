@@ -7,9 +7,10 @@ const initialState = {
   loaded: false,
 };
 
-const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const BASE_URL = import.meta.env.BASE_URL;
 // const BASE_URL = 'http://localhost:3000';
-const PROJECTS_URL = `${BASE_URL}/projects`;
+const PROJECTS_URL = `api/projects`;
+// const PROJECTS_URL = `${BASE_URL}/projects`;
 
 export const getProjectsAsync = createAsyncThunk('projects/getList', async () => {
   const result = await axios.get(PROJECTS_URL);

@@ -7,9 +7,10 @@ const initialState = {
     loading: false,
 };
 
-const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+// const BASE_URL = 'https://hm-033-task-manager.onrender.com';
+const BASE_URL = import.meta.env.BASE_URL;
 // const BASE_URL = 'http://localhost:3000';
-const TASKS_URL = `${BASE_URL}/tasks`;
+const TASKS_URL = `api/tasks`;
 
 export const getTasksAsync = createAsyncThunk('tasks/getList', async (projectId = '') => {
     try {

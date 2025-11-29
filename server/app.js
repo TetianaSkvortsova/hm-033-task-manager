@@ -7,9 +7,18 @@ import {usersData} from './mockData/users.js';
 import {createHash} from 'node:crypto';
 import { writeFile } from 'fs/promises';
 
+const apiPrefix = '/api/';
+
 const app = express();
 app.use(express.json());
 app.use(cors({origin: '*'}));
+const router = express.Router();
+
+router.use((request, response, next) => {
+    console.log(`New Request: ${request.protocol}://${request.headers.host}${request.url}`);
+    next();
+});
+app.use(apiPrefix, router);
 
 function md5(content) {
     return createHash('md5').update(content).digest('base64');
@@ -41,11 +50,13 @@ async function saveFileAsync(filename, data) {
     }
 }
 
-app.get('/projects', (request, response) => {
+router.get('/projects', (request, response) => {
+    response.set('X-Custom-Header-One', 'CustomValue1');
     return response.json(projectsMock);
 });
 
-app.post('/projects', (request, response) => {
+router.post('/projects', (request, response) => {
+    response.set('X-Custom-Header-One', 'CustomValue1');
     const data = request.body;
     const newProject = {
         id: uuidv4(),
@@ -57,17 +68,17 @@ app.post('/projects', (request, response) => {
     return response.send(newProject);
 })
 
-app.get('/tasks', (request, response) => {
+router.get('/tasks', (request, response) => {
     return response.json(tasksData);
 });
 
-app.get('/tasks/:projectId', (request, response) => {
+router.get('/tasks/:projectId', (request, response) => {
     const {projectId} = request.params;
     const filtered = tasksData.filter((t) => t.projectId === projectId);
     return response.json(filtered);
 });
 
-app.post('/auth', (req, res) => {
+router.post('/auth', (req, res) => {
     const {login, password} = req.body;
 
     const user = findUserAndVerify(login, password);
@@ -82,7 +93,7 @@ app.post('/auth', (req, res) => {
     }
 });
 
-app.get('/user-info', (request, response) => {
+router.get('/user-info', (request, response) => {
     const hash = request.header('Authorization');
     const user = usersData.find(user => user.password_hash === hash);
     response.status(200).json({
@@ -91,7 +102,7 @@ app.get('/user-info', (request, response) => {
     });
 });
 
-app.delete('/projects/:id', async (request, response) => {
+router.delete('/projects/:id', async (request, response) => {
     const {id} = request.params;
     const index = projectsMock.findIndex(project => project.id === id);
     if (index !== -1) {
@@ -113,7 +124,7 @@ app.delete('/projects/:id', async (request, response) => {
     }
 })
 
-app.get('/projects/:id', (request, response) => {
+router.get('projects/:id', (request, response) => {
     const {id} = request.params;
     const projectData = projectsMock.find(project => project.id === id);
     return response.status(200).json({
@@ -123,7 +134,7 @@ app.get('/projects/:id', (request, response) => {
     });
 })
 
-app.put('/projects/:id', (request, response) => {
+router.put('/projects/:id', (request, response) => {
     const updateData = request.body;
     const projectId = request.params.id;
     const indexProject = projectsMock.findIndex(project => project.id === updateData.id);
@@ -140,7 +151,7 @@ app.put('/projects/:id', (request, response) => {
     });
 })
 
-app.post('/tasks', (request, response) => {
+router.post('/tasks', (request, response) => {
     const task = request.body;
     const newTask = {
         id: uuidv4(),
@@ -156,7 +167,7 @@ app.post('/tasks', (request, response) => {
     });
 });
 
-app.delete('/tasks/:id', (request, response) => {
+router.delete('/tasks/:id', (request, response) => {
     const { id } = request.params;
     const indexTask = tasksData.findIndex(task => task.id === id);
 
@@ -175,7 +186,7 @@ app.delete('/tasks/:id', (request, response) => {
     }
 });
 
-app.put('/tasks/:id', (request, response) => {
+router.put('/tasks/:id', (request, response) => {
     const updateData = request.body;
     const taskId = request.params.id;
     const indexTask = tasksData.findIndex(task => task.id === taskId);
