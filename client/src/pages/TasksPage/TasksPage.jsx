@@ -15,7 +15,7 @@ export default function TasksPage() {
 
     useEffect(() => {
         setTimeout(() => {
-            dispatch(getTasksAsync(projectId));
+            dispatch(getTasksAsync(projectId || ''));
         }, 1000)
     }, [dispatch, projectId]);
 
