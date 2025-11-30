@@ -31,7 +31,8 @@ function ProjectForm({initialData = {}}) {
     const onSave = async (values) => {
         const action = isEditing ? updateProjectAsync : saveProjectAsync;
         await dispatch(action(values));
-        navigation(urls.PROJECTS_URL);
+        setTimeout(() => {navigation(urls.PROJECTS_URL)}, 1000);
+        // navigation(urls.PROJECTS_URL);
     };
 
     const formik = useFormik({
