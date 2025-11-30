@@ -42,7 +42,8 @@ function TaskForm({initialData = {}}) {
     const onSave = async (values) => {
         const action = isEditing ? updateTaskAsync : createTaskAsync;
         await dispatch(action(values));
-        navigation(urls.TASK_URL);
+        setTimeout(() => {navigation(urls.TASK_URL)}, 100);
+        // navigation(urls.TASK_URL);
     };
 
     const formik = useFormik({
