@@ -18,7 +18,8 @@ export default function TaskCard({id, title, description, priority, status, onCl
         navigate(`/tasks/edit/${id}`);
     };
 
-    const handleDeleteTask = () => {
+    const handleDeleteTask = (event) => {
+        event.stopPropagation();
         dispatch(deleteTaskAsync(id));
         setOpenConfirm(false);
     };
@@ -32,7 +33,9 @@ export default function TaskCard({id, title, description, priority, status, onCl
         <div className='TaskCard' onClick = {() => onClick && onClick(id)}>
             <ActionMenu
                 onEdit={handleEditTask}
-                onDelete={() => setOpenConfirm(true)}
+                onDelete={() => {
+                    setOpenConfirm(true)
+                }}
             />
             <h3>{title}</h3>
 

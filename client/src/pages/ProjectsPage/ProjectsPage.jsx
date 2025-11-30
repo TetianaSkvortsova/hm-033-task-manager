@@ -14,7 +14,7 @@ export default function ProjectsPage() {
     useEffect(() => {
         setTimeout(() => {
             dispatch(getProjectsAsync());
-        }, 100)
+        }, 1000)
       // dispatch(getProjectsAsync());
     }, [dispatch]);
 
