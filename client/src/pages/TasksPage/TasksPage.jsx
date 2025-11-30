@@ -14,7 +14,9 @@ export default function TasksPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getTasksAsync(projectId));
+        setTimeout(() => {
+            dispatch(getTasksAsync(projectId));
+        }, 1000)
     }, [dispatch, projectId]);
 
     const handleClick = (taskId) => {
@@ -24,10 +26,10 @@ export default function TasksPage() {
     return (
         <div className='TasksPage'>
             {!projectId &&
-            <div className='TasksPage__Header'>
-                <TaskFilter />
-                <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
-            </div>
+                <div className='TasksPage__Header'>
+                    <TaskFilter/>
+                    <button type='button' onClick={() => navigate(urls.NEW_TASK_URL)}>Add Task</button>
+                </div>
             }
             <div className="Tasks">
                 {tasks.length === 0 && <span>No tasks available</span>}
